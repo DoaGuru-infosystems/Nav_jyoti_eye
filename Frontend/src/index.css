@@ -1,0 +1,33 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Tailwind CSS v4 — entry stylesheet
+   Only Tailwind directives and @theme tokens live here.
+
+   NOTE: style.css and all skin-*.css files are loaded as <link> tags in
+   index.html (public/ static assets). Tailwind v4's CSS processor only
+   resolves src/-relative @imports; it cannot read public/ paths.
+   ───────────────────────────────────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   @theme — Tailwind v4 design tokens
+   Sourced from:
+     • package/assets/css/abstract/variable.css  (base tokens)
+     • package/assets/css/theme-color/skin-8.css (active skin defaults)
+   These tokens drive Tailwind utility classes: bg-primary, text-secondary,
+   border-primary-light, etc.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@theme {
+  /* ── Brand colours (variable.css defaults) ── */
+  --color-primary:        #00BDE0;
+  --color-primary-dark:   #00a1be;
+  --color-primary-light:  #ccf2f9;
+  --color-secondary:      #0A3366;
+  --color-secondary-dark: #031742;
+  --color-light:          #ecf5fb;
+  --color-heading:        #031B4E;
+  --color-body:           #566593;
+
+  /* ── Typography ── */
+  --font-family-base:  "Poppins", sans-serif;
+  --font-family-title: "Poppins", sans-serif;
+}
