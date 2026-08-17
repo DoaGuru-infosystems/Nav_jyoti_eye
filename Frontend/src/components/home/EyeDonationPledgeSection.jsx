@@ -1,4 +1,6 @@
 export default function EyeDonationPledgeSection() {
+  const pledgeImg = ""; // "/assets/images/about/img3.webp"
+
   return (
 				<section className="relative z-1 bg-primary bg-luminosity bg-cover 2xxl:pt-25 md:pt-17.5 sm:pt-12.5 pt-10 max-xl:pb-7.5 max-lg:pb-0! after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-[#006562] after:-z-1 after:opacity-80" style={{backgroundImage: 'url(/assets/images/background/bg6.webp)'}}>
 					<div className="container">
@@ -61,7 +63,7 @@ export default function EyeDonationPledgeSection() {
 							</div>
 							<div className="lg:w-1/2 self-end">
 								<div className="xl:-mt-25 xl:-me-12.5 xl:-ms-7.5 max-xl:absolute max-lg:relative! max-xl:bottom-0 wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.8s">
-									<img src="/assets/images/about/img3.webp" alt="" />
+									<img src={pledgeImg || "https://images.pexels.com/photos/9929038/pexels-photo-9929038.jpeg?auto=compress&cs=tinysrgb&w=705&h=530&fit=crop"} alt="" />
 								</div>
 							</div>
 						</div>

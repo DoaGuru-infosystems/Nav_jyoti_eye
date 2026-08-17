@@ -6,6 +6,12 @@ export default function VideosPage() {
         selector: '.lightgallery-item'
     });
 
+    const fallbackThumbnails = [
+        "https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg?auto=compress&cs=tinysrgb&w=384&h=256&fit=crop",
+        "https://images.pexels.com/photos/6749718/pexels-photo-6749718.jpeg?auto=compress&cs=tinysrgb&w=384&h=256&fit=crop",
+        "https://images.pexels.com/photos/9929033/pexels-photo-9929033.jpeg?auto=compress&cs=tinysrgb&w=384&h=256&fit=crop"
+    ];
+
     return (
         <div className="page-content bg-white">
             <section className="content-inner bg-light">
@@ -16,7 +22,7 @@ export default function VideosPage() {
                     </div>
 
                     <div ref={galleryRef} className="row">
-                        {videos.map(video => (
+                        {videos.map((video, index) => (
                             <div key={video.id} className="lg:w-1/3 md:w-1/2 w-full px-3.5 mb-7.5">
                                 <a 
                                     href={video.videoUrl} 
@@ -24,7 +30,7 @@ export default function VideosPage() {
                                     data-src={video.videoUrl}
                                 >
                                     <div className="relative">
-                                        <img src={video.thumbnail} alt={video.title} className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                                        <img src={video.thumbnail || fallbackThumbnails[index % fallbackThumbnails.length]} alt={video.title} className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                                             <div className="size-16 rounded-full bg-white/90 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-lg">
                                                 <i className="fas fa-play text-xl ms-1"></i>

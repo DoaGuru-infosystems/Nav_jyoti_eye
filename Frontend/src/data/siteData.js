@@ -40,28 +40,28 @@ export const siteData = {
       title: "Cataract Surgery (Phaco technique)",
       shortDesc: "Advanced Cataract Surgery using the latest Phacoemulsification technique for quick recovery and precise results.",
       path: "/treatments/cataract-surgery",
-      image: "/assets/images/services/img2.webp"
+      // image: "/assets/images/services/img2.webp"
     },
     {
       id: "oculoplasty",
       title: "Orbit & Oculoplasty Surgery",
       shortDesc: "Specialized reconstructive and cosmetic surgeries of the eye, eyelids, and orbit by an expert Oculoplasty Surgeon.",
       path: "/treatments/oculoplasty",
-      image: "/assets/images/services/img3.webp"
+      // image: "/assets/images/services/img3.webp"
     },
     {
       id: "comprehensive-exams",
       title: "Comprehensive Ocular Examinations",
       shortDesc: "Thorough checkups including Lids, Cornea, Fundus, and Retina examinations.",
       path: "/treatments/comprehensive-exams",
-      image: "/assets/images/services/img4.webp"
+      // image: "/assets/images/services/img4.webp"
     },
     {
       id: "refraction-testing",
       title: "Refraction & Vision Testing",
       shortDesc: "Accurate Dry/Wet Retinoscopy and Cycloplegic acceptance testing.",
       path: "/treatments/refraction-testing",
-      image: "/assets/images/services/img5.webp"
+      // image: "/assets/images/services/img5.webp"
     }
   ],
 
@@ -80,7 +80,7 @@ export const siteData = {
         "Ex-consultant, SKEH Basti (U.P.)"
       ],
       registrationNo: "MP10165",
-      image: "/assets/images/team/pic1.webp",
+      // image: "/assets/images/team/pic1.webp",
       social: { facebook: "#", twitter: "#", instagram: "#" }
     }
   ],
@@ -92,7 +92,7 @@ export const siteData = {
       name: "Happy Patient",
       title: "Patient",
       text: "Dr. Warkade provided excellent care and my vision is better than ever. Highly recommended!",
-      image: "/assets/images/testimonials/pic1.webp",
+      // image: "/assets/images/testimonials/pic1.webp",
       rating: 5
     },
     {
@@ -100,7 +100,7 @@ export const siteData = {
       name: "Satisfied Patient",
       title: "Patient",
       text: "The staff and doctors at Navjyoti Eye Hospital are very professional and caring.",
-      image: "/assets/images/testimonials/pic2.webp",
+      // image: "/assets/images/testimonials/pic2.webp",
       rating: 5
     }
   ],
@@ -148,7 +148,7 @@ export const siteData = {
       address: "Opposite Pal Hospital, Mastana Chowk, Ranjhi, Jabalpur (M.P.) — (पाल अस्पताल के सामने, मस्ताना चौक, राँझी, जबलपुर)",
       phone: "+91 6268875304",
       email: "info@navjyotieyehospital.com",
-      image: "/assets/images/map/map1.webp",
+      // image: "/assets/images/map/map1.webp",
       mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14674.340242207137!2d79.9754972!3d23.1488188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981acdfa9b34015%3A0x6b8bc009405dc4a!2sRanjhi%2C%20Jabalpur%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1719221707984!5m2!1sen!2sin"
     }
   ]

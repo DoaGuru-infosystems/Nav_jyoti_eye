@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { saveLead } from '../data/dataStore';
 
 export default function ContactPage() {
+	const contactImg7 = ""; // "/assets/images/about/img7.webp"
 	const [formData, setFormData] = useState({
 		dzName: '',
 		dzEmail: '',
@@ -114,7 +115,7 @@ export default function ContactPage() {
 					<div className="lg:w-1/2 w-full lg:order-1 order-2">
 						<div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
 							<div className="relative z-1 md:ps-12.5 md:pe-25 px-7.5">
-								<img src="/assets/images/about/img7.webp" alt="" className="w-full" />
+								<img src={contactImg7 || "https://images.pexels.com/photos/5996604/pexels-photo-5996604.jpeg?auto=compress&cs=tinysrgb&w=600&h=630&fit=crop"} alt="" className="w-full" />
 							</div>
 							<div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-right-15 ltr:right-0 rtl:lg:-left-15 rtl:left-0 z-99 max-sm:hidden">
 								<div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { saveAppointment } from '../data/dataStore';
 
 export default function AppointmentPage() {
+  const appointImg6 = ""; // "/assets/images/about/img6.webp"
   const [formData, setFormData] = useState({
     dzName: '',
     dzEmail: '',
@@ -133,7 +134,7 @@ export default function AppointmentPage() {
             <div className="xl:w-1/2 lg:w-2/3 w-full">
               <div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
                 <div className="relative z-1 md:ps-12.5 md:pe-25 px-7.5">
-                  <img src="/assets/images/about/img6.webp" alt="" className="w-full" />
+                  <img src={appointImg6 || "https://images.pexels.com/photos/8459972/pexels-photo-8459972.jpeg?auto=compress&cs=tinysrgb&w=430&h=600&fit=crop"} alt="" className="w-full" />
                 </div>
                 <div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-left-15 rtl:lg:-right-15 ltr:left-0 rtl:right-0 z-99 max-sm:hidden">
                   <div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">

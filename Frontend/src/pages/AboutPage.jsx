@@ -5,6 +5,12 @@ import TestimonialSection from '../components/shared/TestimonialSection';
 
 
 export default function AboutPage() {
+	const aboutImg6 = ""; // "/assets/images/about/img6.webp"
+	const aboutImg10 = ""; // "/assets/images/about/img10.webp"
+	const aboutImg11 = ""; // "/assets/images/about/img11.webp"
+	const aboutArchedImage = ""; // "/assets/images/about/img4.webp" (customized for About Us page)
+	const aboutBadgeImage = ""; // "/assets/images/about/img5.webp" (customized for About Us page)
+
 	return (
 		<>
 			<div className="2xxl:min-h-125 lg:min-h-112.5 md:min-h-full sm:min-h-87.5 min-h-75 bg-cover bg-center bg-light relative z-1 w-full overflow-hidden pb-7.5 before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:size-full before:bg-primary before:opacity-70" style={ { backgroundImage: 'url(/assets/images/banner/bnr1.webp)' } }>
@@ -21,7 +27,10 @@ export default function AboutPage() {
 				</div>
 			</div>
 
-			<AboutSection />
+			<AboutSection 
+				archedImage={aboutArchedImage || "https://images.pexels.com/photos/9929038/pexels-photo-9929038.jpeg?auto=compress&cs=tinysrgb&w=550&h=530&fit=crop"} 
+				badgeImage={aboutBadgeImage || "https://images.pexels.com/photos/8949024/pexels-photo-8949024.jpeg?auto=compress&cs=tinysrgb&w=550&h=530&fit=crop"} 
+			/>
 
 
 			<section className="2xxl:pt-25 md:pt-17.5 sm:pt-12.5 pt-10 relative z-1 bg-white" style={ { backgroundImage: 'url(/assets/images/background/bg7.webp)' } }>
@@ -62,7 +71,7 @@ export default function AboutPage() {
 						<div className="xl:w-1/2 lg:w-2/3 w-full">
 							<div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
 								<div className="relative z-1 md:ps-12.5 md:pe-25 px-7.5">
-									<img src="/assets/images/about/img6.webp" alt="" className="w-full" />
+									<img src={aboutImg6 || "https://images.pexels.com/photos/6749781/pexels-photo-6749781.jpeg?auto=compress&cs=tinysrgb&w=475&h=745&fit=crop"} alt="" className="w-full" />
 								</div>
 								<div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-left-15 rtl:lg:-right-15 ltr:left-0 rtl:right-0 z-99 max-sm:hidden">
 									<div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">
@@ -99,7 +108,7 @@ export default function AboutPage() {
 						</div>
 						<div className="lg:w-5/12 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 							<div className="relative overflow-hidden xl:h-125 sm:h-50 h-62.5 sm:rounded-3xl rounded-xxl">
-								<img src="/assets/images/about/img10.webp" alt="" className="size-full object-cover" />
+								<img src={aboutImg10 || "https://images.pexels.com/photos/6749698/pexels-photo-6749698.jpeg?auto=compress&cs=tinysrgb&w=530&h=520&fit=crop"} alt="" className="size-full object-cover" />
 							</div>
 						</div>
 					</div>
@@ -241,7 +250,7 @@ export default function AboutPage() {
 						</div>
 						<div className="lg:w-5/12 w-full mb-7.5" data-bottom-top="transform: translateY(100px)" data-top-bottom="transform: translateY(-100px)">
 							<div className="relative overflow-hidden sm:rounded-xxl rounded-lg xl:h-175 sm:h-150 h-112.5">
-								<img loading="lazy" src="/assets/images/about/img11.webp" alt="img8" width="840" height="1080" className="size-full object-cover" />
+								<img loading="lazy" src={aboutImg11 || "https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=530&h=705&fit=crop"} alt="img8" width="840" height="1080" className="size-full object-cover" />
 							</div>
 						</div>
 					</div>

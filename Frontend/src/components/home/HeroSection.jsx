@@ -1,4 +1,8 @@
 export default function HeroSection() {
+  const heroImg1 = ""; // "/assets/images/hero/img1.jpg"
+  const heroImg2 = ""; // "/assets/images/hero/img2.jpg"
+  const heroImg3 = ""; // "/assets/images/hero/img3.jpg"
+
   return (
     <div className="relative z-1 overflow-hidden 3xl:h-250 2xl:h-200 lg:h-162.5 md:h-full h-auto pb-20 3xl:pt-0 pt-30 after:absolute after:top-0 ltr:after:right-0 rtl:after:left-0 after:w-[49%] after:h-full after:bg-light after:-z-1">
 					<div className="container-fluid h-full">
@@ -27,19 +31,19 @@ export default function HeroSection() {
 												<div className="row justify-end">
 													<div className="w-5/6 mb-7.5">
 														<div className="relative overflow-hidden h-auto">
-															<span><img className="size-full object-cover sm:rounded-4xl rounded-xxl" src="/assets/images/hero-banner/pic1.webp" alt="" /></span>
+															<span><img src={heroImg1 || "https://images.pexels.com/photos/6749738/pexels-photo-6749738.jpeg?auto=compress&cs=tinysrgb&w=335&h=275&fit=crop"} alt="" className="size-full object-cover sm:rounded-4xl rounded-xxl" /></span>
 															<div>
 																<button data-type="youtube" data-src="https://www.youtube.com/embed/o8OgzQdA70c" className="bg-white md:size-14.5 sm:size-12.5 size-8.75 rounded-full flex items-center justify-center text-primary sm:text-xl text-sm absolute top-1/2 left-1/2 -translate-1/2"><i className="fa fa-play"></i></button>
 															</div>
 														</div>
 													</div>
 													<div className="w-full mb-7.5">
-														<img className="size-full object-cover sm:rounded-4xl rounded-xxl" src="/assets/images/hero-banner/pic2.webp" alt="" />
+														<img src={heroImg2 || "https://images.pexels.com/photos/6749715/pexels-photo-6749715.jpeg?auto=compress&cs=tinysrgb&w=430&h=470&fit=crop"} alt="" className="size-full object-cover sm:rounded-4xl rounded-xxl" />
 													</div>
 												</div>
 											</div>
 											<div className="w-7/12 mb-7.5">
-												<img className="2xxl:h-188.75 h-full w-136.25 object-cover sm:rounded-4xl rounded-xxl" src="/assets/images/hero-banner/pic3.webp" alt="" />
+												<img src={heroImg3 || "https://images.pexels.com/photos/5996604/pexels-photo-5996604.jpeg?auto=compress&cs=tinysrgb&w=430&h=470&fit=crop"} alt="" className="2xxl:h-188.75 h-full w-136.25 object-cover sm:rounded-4xl rounded-xxl" />
 											</div>
 										</div>
 									</div>

@@ -1,4 +1,10 @@
 export default function TeamSection() {
+  // To use the original images, uncomment the paths. To use the Pexels fallback, leave them as empty strings.
+  const teamImg1 = ""; // "/assets/images/team/img1.webp"
+  const teamImg2 = ""; // "/assets/images/team/img2.webp"
+  const teamImg3 = ""; // "/assets/images/team/img3.webp"
+  const teamImg4 = ""; // "/assets/images/team/img4.webp"
+
   return (
     <section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5 bg-light image-tooltip-section">
 			<div className="container">
@@ -10,7 +16,7 @@ export default function TeamSection() {
 					<div className="xl:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
 						<div className="bg-light rounded-2xl overflow-hidden box-hover active">
 							<div className="relative overflow-hidden">
-								<img src="/assets/images/team/img1.webp" alt="" className="w-full" />
+								<img src={teamImg1 || "https://images.pexels.com/photos/6749711/pexels-photo-6749711.jpeg?auto=compress&cs=tinysrgb&w=315&h=345&fit=crop"} alt="" className="w-full" />
 							</div>
 							<div className="bg-white py-3.75 px-5 rounded-b-2xl border-2 border-primary/10 border-b-0">
 								<div className="relative group">
@@ -30,7 +36,7 @@ export default function TeamSection() {
 					<div className="xl:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
 						<div className="bg-light rounded-2xl overflow-hidden box-hover">
 							<div className="relative overflow-hidden">
-								<img src="/assets/images/team/img2.webp" alt="" className="w-full" />
+								<img src={teamImg2 || "https://images.pexels.com/photos/5996595/pexels-photo-5996595.jpeg?auto=compress&cs=tinysrgb&w=315&h=345&fit=crop"} alt="" className="w-full" />
 							</div>
 							<div className="bg-white py-3.75 px-5 rounded-b-2xl border-2 border-primary/10 border-b-0">
 								<div className="relative group">
@@ -50,7 +56,7 @@ export default function TeamSection() {
 					<div className="xl:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
 						<div className="bg-light rounded-2xl overflow-hidden box-hover">
 							<div className="relative overflow-hidden">
-								<img src="/assets/images/team/img3.webp" alt="" className="w-full" />
+								<img src={teamImg3 || "https://images.pexels.com/photos/6749767/pexels-photo-6749767.jpeg?auto=compress&cs=tinysrgb&w=315&h=345&fit=crop"} alt="" className="w-full" />
 							</div>
 							<div className="bg-white py-3.75 px-5 rounded-b-2xl border-2 border-primary/10 border-b-0">
 								<div className="relative group">
@@ -70,7 +76,7 @@ export default function TeamSection() {
 					<div className="xl:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.2s"  data-wow-duration="0.8s">
 						<div className="bg-light rounded-2xl overflow-hidden box-hover">
 							<div className="relative overflow-hidden">
-								<img src="/assets/images/team/img4.webp" alt="" className="w-full" />
+								<img src={teamImg4 || "https://images.pexels.com/photos/5996604/pexels-photo-5996604.jpeg?auto=compress&cs=tinysrgb&w=315&h=345&fit=crop"} alt="" className="w-full" />
 							</div>
 							<div className="bg-white py-3.75 px-5 rounded-b-2xl border-2 border-primary/10 border-b-0">
 								<div className="relative group">

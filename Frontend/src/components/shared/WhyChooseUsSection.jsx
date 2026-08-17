@@ -1,4 +1,10 @@
+import { useState } from 'react';
+
 export default function WhyChooseUsSection() {
+  const compareBefore = ""; // "/assets/images/compare/before1.webp"
+  const compareAfter = ""; // "/assets/images/compare/after1.webp"
+  const [position, setPosition] = useState(50);
+
   return (
 				<section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5 bg-light overflow-hidden" style={{backgroundImage: 'url(/assets/images/background/bg7.webp)'}}>
 				<div className="container">
@@ -91,18 +97,18 @@ export default function WhyChooseUsSection() {
 								</div>
 							</div>
 						</div>
-						<div className="xl:w-1/2 w-full mb-7.5 lg:!ps-12 wow fadeInUp before-after-slider [direction:ltr]" style={{ '--position': '50%' }} data-wow-delay="0.2s" data-wow-duration="0.7s">
+						<div className="xl:w-1/2 w-full mb-7.5 lg:!ps-12 wow fadeInUp before-after-slider [direction:ltr]" style={{ '--position': `${position}%` }} data-wow-delay="0.2s" data-wow-duration="0.7s">
 							<div className="image-container relative overflow-hidden md:!h-161.25 sm:!h-125 !h-95 object-cover rounded-2xxl box-content">
-								<div className="[clip-path:polygon(0_0,var(--position)_0,var(--position)_100%,0%_100%)] absolute inset-0">
-									<img className="image-before size-full object-cover object-center" src="/assets/images/compare/before1.webp" alt="before1" />
+								<div className="[clip-path:polygon(0_0,var(--position)_0,var(--position)_100%,0%_100%)] absolute inset-0 z-0 pointer-events-none">
+									<img className="image-before size-full object-cover object-center blur-md" src={compareBefore || "/assets/images/compare/eye_chart_glasses.jpg"} alt="before1" />
 								</div>
-								<img className="image-after size-full object-cover object-center" src="/assets/images/compare/after1.webp" alt="after1" />
-								<input type="range" min="0" max="100" defaultValue="50" aria-label="Percentage of before photo shown" className="slider absolute inset-0 cursor-pointer opacity-0 size-ful" />
-								<div className="absolute inset-0 w-1 h-full bg-white left-(--position) -translate-x-1/2 pointer-events-none slider-line z-1" aria-hidden="true"></div>
-								<div className="absolute p-2 top-1/2 left-(--position) -translate-1/2 pointer-events-none flex gap-3 items-center justify-center text-xl bg-primary text-white rounded-full sm:size-20 size-15 z-0 slider-button" aria-hidden="true">
+								<img className="image-after size-full object-cover object-center pointer-events-none" src={compareAfter || "/assets/images/compare/eye_chart_glasses.jpg"} alt="after1" />
+								<input type="range" min="0" max="100" value={position} onChange={(e) => setPosition(e.target.value)} aria-label="Percentage of before photo shown" className="slider absolute inset-0 cursor-pointer opacity-0 size-full z-30" />
+								<div className="absolute p-2 top-1/2 pointer-events-none flex gap-3 items-center justify-center text-xl bg-primary text-white rounded-full sm:size-20 size-15 z-10 slider-button" style={{ left: `${position}%`, transform: 'translate(-50%, -50%)' }} aria-hidden="true">
 									<i className="fa-solid fa-angle-left sm:text-lg"></i>
 									<i className="fa-solid fa-angle-right sm:text-lg"></i>
 								</div>
+								<div className="absolute top-0 bottom-0 w-1 bg-white pointer-events-none slider-line z-20" style={{ left: `${position}%`, transform: 'translateX(-50%)' }} aria-hidden="true"></div>
 							</div>
 						</div>
 					</div>

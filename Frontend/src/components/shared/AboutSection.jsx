@@ -1,4 +1,7 @@
-export default function AboutSection() {
+export default function AboutSection({
+  archedImage = "", // "/assets/images/about/img4.webp"
+  badgeImage = "" // "/assets/images/about/img5.webp"
+}) {
   return (
     <section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5 overflow-hidden bg-light" style={{backgroundImage: 'url(/assets/images/background/bg7.webp)'}}>
 				<div className="container">
@@ -6,8 +9,8 @@ export default function AboutSection() {
 						<div className="lg:w-1/2 w-full">
 							<div className="relative z-1 xl:pe-27.5 sm:pe-12.5 mb-7.5">
 								<div className="relative flex items-center">
-									<img src="/assets/images/about/img5.webp" alt="" className="xl:size-42.5 w-37.5 h-45 border-[10px] border-white absolute bottom-0 ltr:-right-15 rtl:-left-15 shadow-22 rounded-3xl ltr:max-sm:left-0 rtl:max-sm:right-0 object-cover" />
-									<img src="/assets/images/about/img4.webp" alt="" className="size-full rounded-t-[400px] object-cover" />
+									<img src={badgeImage || "https://images.pexels.com/photos/8949024/pexels-photo-8949024.jpeg?auto=compress&cs=tinysrgb&w=170&h=170&fit=crop"} alt="" className="xl:size-42.5 w-37.5 h-45 border-[10px] border-white absolute bottom-0 ltr:-right-15 rtl:-left-15 shadow-22 rounded-3xl ltr:max-sm:left-0 rtl:max-sm:right-0 object-cover" />
+									<img src={archedImage || "https://images.pexels.com/photos/6749781/pexels-photo-6749781.jpeg?auto=compress&cs=tinysrgb&w=550&h=530&fit=crop"} alt="" className="size-full rounded-t-[400px] object-cover" />
 								</div>
 								<div className="absolute -top-10 ltr:sm:right-25 ltr:right-0 rtl:sm:left-25 rtl:left-0" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
 									<a href="#" onClick={e => e.preventDefault()}>

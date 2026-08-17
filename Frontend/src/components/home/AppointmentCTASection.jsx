@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { saveAppointment } from '../../data/dataStore';
 
 export default function AppointmentCTASection() {
+  const ctaImg = ""; // "/assets/images/about/img1.webp"
+
   const [formData, setFormData] = useState({
     dzName: '',
     dzEmail: '',
@@ -132,7 +134,7 @@ export default function AppointmentCTASection() {
 					</div>
 					<div className="lg:w-1/3 w-full self-end">
 						<div className="lg:-mt-37.5 ltr:xl:-me-32.5 ltr:lg:-me-6.25 rtl:3xl:-me-32.5 rtl:lg:-me-6.25 lg:-ms-7.5 max-lg:text-center relative after:absolute after:top-2/5 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-pointed-arrow wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.8s">
-							<img src="/assets/images/about/img1.webp" alt="" />	
+							<img src={ctaImg || "https://images.pexels.com/photos/33812025/pexels-photo-33812025.jpeg?auto=compress&cs=tinysrgb&w=580&h=570&fit=crop"} alt="" />	
 						</div>
 					</div>
 				</div>
