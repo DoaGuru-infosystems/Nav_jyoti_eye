@@ -10,6 +10,7 @@
  */
 
 import { Link } from 'react-router-dom';
+import { siteData } from '../../data/siteData';
 
 const quickLinks = [
   { label: 'About Us', href: '/about-us' },
@@ -20,9 +21,9 @@ const quickLinks = [
 ];
 
 const contactInfo = [
-  { icon: 'icon-mail', text: 'contact@company.com', href: 'mailto:contact@company.com', color: '#57EEE9' },
-  { icon: 'icon-phone-call', text: '(414) 687 - 5892', href: 'tel:+14146875892', color: '#57EEE9' },
-  { icon: 'icon-map-pin', text: '794 Mcallister St San Francisco, 94102', href: '#', color: '#57EEE9' },
+  { icon: 'icon-mail', text: siteData.contact.primaryEmail, href: `mailto:${siteData.contact.primaryEmail}`, color: '#57EEE9' },
+  { icon: 'icon-phone-call', text: siteData.contact.primaryPhone, href: `tel:${siteData.contact.primaryPhone.replace(/\s+/g, '')}`, color: '#57EEE9' },
+  { icon: 'icon-map-pin', text: siteData.hospitals[0].address, href: '#', color: '#57EEE9' },
 ];
 
 const socialLinks = [
@@ -57,7 +58,7 @@ export default function Footer() {
                   </Link>
                 </div>
                 <p className="text-lg font-light leading-[1.2] text-white/80 mb-5">
-                  ClinicMaster Ipsum Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam
+                  {siteData.branding.slogan}
                 </p>
                 {/* Google rating badge */}
                 <div className="inline-flex items-center gap-3.75 bg-white py-3 px-5 rounded-xxl text-secondary text-sm font-medium">

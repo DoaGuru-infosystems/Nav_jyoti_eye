@@ -15,6 +15,7 @@ import { useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import useXMenu from '../../hooks/useXMenu';
 import navLinks from '../../data/navLinks';
+import { siteData } from '../../data/siteData';
 
 /* ── Recursive nav item renderer ────────────────────────────────────────── */
 function NavItem({ item, depth = 0 }) {
@@ -181,7 +182,7 @@ export default function Header() {
                   </div>
                   <div className="widget-content">
                     <h6 className="text-primary text-sm font-normal mb-0 font-base!">Contact us</h6>
-                    <a href="tel:+11234567890" className="sm:text-lg text-base font-semibold text-secondary font-title!">+1 123 456 7890</a>
+                    <a href={`tel:${siteData.contact.primaryPhone.replace(/\s+/g, '')}`} className="sm:text-lg text-base font-semibold text-secondary font-title!">{siteData.contact.primaryPhone}</a>
                   </div>
                 </li>
 

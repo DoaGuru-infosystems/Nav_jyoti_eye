@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { saveAppointment } from '../../data/dataStore';
+import doctorImg from '../../assets/images/vaibhav-vivian-3HIroMoyre8-unsplash-removebg-preview.png';
 
 export default function AppointmentCTASection() {
-  const ctaImg = ""; // "/assets/images/about/img1.webp"
-
+  const ctaImg = doctorImg; 
   const [formData, setFormData] = useState({
     dzName: '',
     dzEmail: '',

@@ -38,28 +38,28 @@ export const siteData = {
     {
       id: "cataract-surgery",
       title: "Cataract Surgery (Phaco technique)",
-      shortDesc: "Advanced Cataract Surgery using the latest Phacoemulsification technique for quick recovery and precise results.",
+      shortDesc: "Restore crystal-clear vision with our advanced Phacoemulsification (Phaco) technique. This state-of-the-art, minimally invasive cataract surgery ensures a rapid recovery, minimal discomfort, and highly precise results. We utilize premium intraocular lenses (IOLs) tailored to your visual needs, allowing you to return to your daily activities with enhanced clarity.",
       path: "/treatments/cataract-surgery",
       // image: "/assets/images/services/img2.webp"
     },
     {
       id: "oculoplasty",
       title: "Orbit & Oculoplasty Surgery",
-      shortDesc: "Specialized reconstructive and cosmetic surgeries of the eye, eyelids, and orbit by an expert Oculoplasty Surgeon.",
+      shortDesc: "Our specialized Orbit & Oculoplasty services address both cosmetic and reconstructive needs of the eyes, eyelids, tear ducts, and surrounding facial structures. Whether treating droopy eyelids (ptosis), orbital tumors, or trauma reconstruction, our expert surgical interventions restore both optimal function and aesthetic appearance with utmost precision.",
       path: "/treatments/oculoplasty",
       // image: "/assets/images/services/img3.webp"
     },
     {
       id: "comprehensive-exams",
       title: "Comprehensive Ocular Examinations",
-      shortDesc: "Thorough checkups including Lids, Cornea, Fundus, and Retina examinations.",
+      shortDesc: "Prevention and early detection are key to lifelong eye health. Our comprehensive evaluations go beyond standard vision tests to thoroughly assess the anterior and posterior segments of your eye. We meticulously examine the eyelids, cornea, fundus, and retina using advanced diagnostic imaging to detect conditions like glaucoma, macular degeneration, and diabetic retinopathy early.",
       path: "/treatments/comprehensive-exams",
       // image: "/assets/images/services/img4.webp"
     },
     {
       id: "refraction-testing",
       title: "Refraction & Vision Testing",
-      shortDesc: "Accurate Dry/Wet Retinoscopy and Cycloplegic acceptance testing.",
+      shortDesc: "Achieve your perfect visual acuity with our exhaustive refraction testing. We perform detailed Dry and Wet (Cycloplegic) Retinoscopy to accurately determine your exact prescription by relaxing the eye muscles. This ensures the most precise measurements for eyeglasses or contact lenses, specifically crucial for pediatric patients and those with complex refractive errors.",
       path: "/treatments/refraction-testing",
       // image: "/assets/images/services/img5.webp"
     }
@@ -89,18 +89,26 @@ export const siteData = {
   testimonials: [
     {
       id: "test-1",
-      name: "Happy Patient",
+      name: "Vipul Sharma",
       title: "Patient",
-      text: "Dr. Warkade provided excellent care and my vision is better than ever. Highly recommended!",
+      text: "Nav Jyoti Eye care is going to be a big benefit for the residents of Ranjhi, Khamaria, VFJ and adjoining areas. The clinic is well equipped with latest machineries. Dr. Warkade is highly experienced doctor and his team including optometrist Mr. Ajay and others are qualified and skilled. They are also well behaved and gentle. I recommend everyone for any type eye problems.",
       // image: "/assets/images/testimonials/pic1.webp",
       rating: 5
     },
     {
       id: "test-2",
-      name: "Satisfied Patient",
+      name: "Preeti Chaturvedi",
       title: "Patient",
-      text: "The staff and doctors at Navjyoti Eye Hospital are very professional and caring.",
+      text: "Swabhavata is very polite. He patiently listens to patients' concerns and resolves them. The clinic is located on a flat surface, so elderly patients will have no trouble seeing him.",
       // image: "/assets/images/testimonials/pic2.webp",
+      rating: 5
+    },
+    {
+      id: "test-3",
+      name: "lakshman Singh dhurve",
+      title: "Patient",
+      text: "Excellent work nd best hospital for eye and staff behaviour was too kind and good",
+      // image: "/assets/images/testimonials/pic1.webp",
       rating: 5
     }
   ],
@@ -109,13 +117,23 @@ export const siteData = {
   faqs: [
     {
       id: "faq-1",
-      question: "What are your consultation timings?",
-      answer: "We are open Monday to Saturday from 11:00 AM to 8:30 PM. We are closed on Sundays."
+      question: "Where is Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade located?",
+      answer: "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade is located at 1637, Mastana Chowk Road, Ranjhi, Bengali Colony, Jabalpur - 482011, Madhya Pradesh, India."
     },
     {
       id: "faq-2",
-      question: "Where are you located?",
-      answer: "We are located Opposite Pal Hospital, Mastana Chowk, Ranjhi, Jabalpur (M.P.)."
+      question: "What are the working hours of Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade?",
+      answer: "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade opens at 10 AM on working days. Please confirm closing time directly."
+    },
+    {
+      id: "faq-3",
+      question: "What payment methods does Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade accept?",
+      answer: "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade accepts cash. Please confirm other payment options directly."
+    },
+    {
+      id: "faq-4",
+      question: "Is Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade open on Sunday?",
+      answer: "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade is listed as open on working days from 10 AM. Please call to confirm Sunday availability."
     }
   ],
   
@@ -149,7 +167,7 @@ export const siteData = {
       phone: "+91 6268875304",
       email: "info@navjyotieyehospital.com",
       // image: "/assets/images/map/map1.webp",
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14674.340242207137!2d79.9754972!3d23.1488188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981acdfa9b34015%3A0x6b8bc009405dc4a!2sRanjhi%2C%20Jabalpur%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1719221707984!5m2!1sen!2sin"
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.0854233450386!2d80.0024431!3d23.203557300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981afab2540339b%3A0x75ed4da6b501e685!2sNavjyoti%20eye%20care%20Dr%20Rukmendra%20Pratap%20Singh%20Warkade!5e0!3m2!1sen!2sin!4v1786968818526!5m2!1sen!2sin"
     }
   ]
 };

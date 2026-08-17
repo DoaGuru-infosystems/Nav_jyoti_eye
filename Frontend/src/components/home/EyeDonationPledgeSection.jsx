@@ -1,5 +1,7 @@
+import childPatientImg from '../../assets/images/chiled petent.png';
+
 export default function EyeDonationPledgeSection() {
-  const pledgeImg = ""; // "/assets/images/about/img3.webp"
+  const pledgeImg = childPatientImg;
 
   return (
 				<section className="relative z-1 bg-primary bg-luminosity bg-cover 2xxl:pt-25 md:pt-17.5 sm:pt-12.5 pt-10 max-xl:pb-7.5 max-lg:pb-0! after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-[#006562] after:-z-1 after:opacity-80" style={{backgroundImage: 'url(/assets/images/background/bg6.webp)'}}>
@@ -52,7 +54,7 @@ export default function EyeDonationPledgeSection() {
 												</svg>
 											</div>
 											<div>
-												<a href="tel:+11234567890" className="text-xl font-normal text-white! font-base">+1 123 456 7890</a>
+												<a href="tel:+916268875304" className="text-xl font-normal text-white! font-base">+91 6268875304</a>
 											</div>
 										</div>
 									</div>

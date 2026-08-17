@@ -9,40 +9,84 @@ const AppointmentsPage = () => {
     }, []);
 
     return (
-        <div>
-            <h1 className="text-2xl font-bold mb-6">Appointments</h1>
-            <div className="bg-white shadow rounded-lg overflow-hidden border border-gray-200">
-                <ul className="divide-y divide-gray-200">
-                    {appointments.length === 0 ? (
-                        <li className="p-8 text-center text-gray-500">No appointments found.</li>
-                    ) : (
-                        appointments.map((apt) => (
-                            <li key={apt.id} className="p-6 hover:bg-gray-50 transition-colors">
-                                <div className="flex justify-between items-start mb-2">
-                                    <div className="font-medium text-lg text-gray-900">{apt.name}</div>
-                                    <div className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                                        Submitted: {new Date(apt.date).toLocaleString()}
-                                    </div>
-                                </div>
-                                <div className="text-gray-600 font-medium mb-3">
-                                    <a href={`mailto:${apt.email}`} className="text-blue-600 hover:underline">{apt.email}</a> 
-                                    <span className="mx-2">•</span> 
-                                    <a href={`tel:${apt.phone}`} className="text-blue-600 hover:underline">{apt.phone}</a>
-                                </div>
-                                <div className="grid grid-cols-2 gap-4 mt-2">
-                                    <div className="bg-gray-50 p-3 rounded border border-gray-100">
-                                        <span className="block text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Department</span>
-                                        <span className="text-gray-800">{apt.department || 'Not specified'}</span>
-                                    </div>
-                                    <div className="bg-gray-50 p-3 rounded border border-gray-100">
-                                        <span className="block text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Preferred Date</span>
-                                        <span className="text-gray-800">{apt.appointmentDate || 'Not specified'}</span>
-                                    </div>
-                                </div>
-                            </li>
-                        ))
-                    )}
-                </ul>
+        <div className="p-6 bg-gray-50 min-h-full">
+            <div className="flex justify-between items-center mb-8">
+                <div>
+                    <h1 className="text-3xl font-bold text-gray-800">Appointments</h1>
+                    <p className="text-gray-500 mt-1">Manage patient appointment requests.</p>
+                </div>
+                <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                        <i className="feather icon-calendar text-lg"></i>
+                    </div>
+                    <div>
+                        <p className="text-sm text-gray-500 font-medium">Total Appointments</p>
+                        <p className="text-xl font-bold text-gray-800">{appointments.length}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="bg-white shadow-sm rounded-xl overflow-hidden border border-gray-200">
+                <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse">
+                        <thead>
+                            <tr className="bg-gray-50 border-b border-gray-200 text-sm font-medium text-gray-500 uppercase tracking-wider">
+                                <th className="p-4 px-6">Patient Info</th>
+                                <th className="p-4 px-6">Department</th>
+                                <th className="p-4 px-6">Preferred Date</th>
+                                <th className="p-4 px-6">Submitted On</th>
+                                <th className="p-4 px-6 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-100">
+                            {appointments.length === 0 ? (
+                                <tr>
+                                    <td colSpan="5" className="p-8 text-center text-gray-500">No appointments found.</td>
+                                </tr>
+                            ) : (
+                                appointments.map((apt) => (
+                                    <tr key={apt.id} className="hover:bg-green-50/50 transition-colors group">
+                                        <td className="p-4 px-6 align-top">
+                                            <div className="font-semibold text-gray-800 mb-1">{apt.name}</div>
+                                            <div className="flex flex-col gap-1 text-sm text-gray-500">
+                                                <a href={`mailto:${apt.email}`} className="flex items-center gap-2 hover:text-green-600 transition-colors">
+                                                    <i className="feather icon-mail"></i> {apt.email}
+                                                </a>
+                                                <a href={`tel:${apt.phone}`} className="flex items-center gap-2 hover:text-green-600 transition-colors">
+                                                    <i className="feather icon-phone"></i> {apt.phone}
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td className="p-4 px-6 align-top">
+                                            <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-blue-50 text-blue-700 border border-blue-100">
+                                                {apt.department || 'Not specified'}
+                                            </span>
+                                        </td>
+                                        <td className="p-4 px-6 align-top">
+                                            <div className="flex items-center gap-2 text-gray-800 font-medium">
+                                                <i className="feather icon-clock text-green-500"></i>
+                                                {apt.appointmentDate || 'Not specified'}
+                                            </div>
+                                        </td>
+                                        <td className="p-4 px-6 align-top">
+                                            <div className="text-sm text-gray-600">
+                                                {new Date(apt.date).toLocaleDateString()}
+                                            </div>
+                                            <div className="text-xs text-gray-400 mt-1">
+                                                {new Date(apt.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                            </div>
+                                        </td>
+                                        <td className="p-4 px-6 align-middle text-center">
+                                            <a href={`tel:${apt.phone}`} className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600 hover:bg-green-600 hover:text-white transition-colors" title="Call Patient">
+                                                <i className="feather icon-phone-call"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                ))
+                            )}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

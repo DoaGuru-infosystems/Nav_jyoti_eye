@@ -1,3 +1,5 @@
+import { siteData } from '../../data/siteData';
+
 export default function TestimonialSection() {
   return (
 				<section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5 relative z-1 overflow-hidden">
@@ -8,68 +10,28 @@ export default function TestimonialSection() {
 				</div>
 				<div className="swiper testimonial-swiper3  wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 					<div className="swiper-wrapper">
-						<div className="swiper-slide !p-2.5">
+                        {siteData.testimonials.map((test, index) => (
+						<div key={test.id} className="swiper-slide !p-2.5">
 							<div className="flex relative z-1 h-full flex-col justify-center items-center">
 								<div className="min-w-20 size-20 lg:rounded-full rounded-xxl sm:rounded-ee-[100px] overflow-hidden">
-									<img src="/assets/images/testimonial/large/img1.webp" alt="" className="size-full object-cover" />
+									<img src={`/assets/images/testimonial/large/img${(index % 3) + 1}.webp`} alt="" className="size-full object-cover" />
 								</div>	
 								<div className="lg:p-7.5 lg:pt-5.5 lg:pe-12.5 md:pt-10 md:pe-7.5 md:pb-5 pb-3.75 flex flex-col items-start justify-start relative z-1 w-full rounded-xxl">
 									<div className="lg:mb-8.75 mb-5">
 										<div className="relative z-1">
-											<p className="leading-[1.7] xl:text-[22px] lg:text-lg md:text-base text-2sm text-secondary text-center w-4/5 m-auto max-lg:mt-5 max-md:mt-2.5!">Symptoms of dry eye syndrome may affect one or both eyes and often include: burning or gritty feeling in the eyes, mucus in the Symptoms of dry eye syndrome may affect one or both eyes and often include: burning or gritty feeling in the eyes, mucus in the </p>
+											<p className="leading-[1.7] xl:text-[22px] lg:text-lg md:text-base text-2sm text-secondary text-center w-4/5 m-auto max-lg:mt-5 max-md:mt-2.5!">{test.text}</p>
 										</div>
 									</div>
 									<div className="m-auto">
 										<div className="flex items-center sm:gap-3 gap-1.25 justify-center mb-5">
-											<h5 className="text-xl">Robert Clarkson,</h5>
-											<span className="text-lg">Teacher</span>
+											<h5 className="text-xl">{test.name},</h5>
+											<span className="text-lg">{test.title}</span>
 										</div>		
 									</div>		
 								</div>
 							</div>
 						</div>
-						<div className="swiper-slide !p-2.5">
-							<div className="flex relative z-1 h-full flex-col justify-center items-center">
-								<div className="min-w-20 size-20 lg:rounded-full rounded-xxl sm:rounded-ee-[100px] overflow-hidden">
-									<img src="/assets/images/testimonial/large/img2.webp" alt="" className="size-full object-cover" />
-								</div>	
-								<div className="lg:p-7.5 lg:pt-5.5 lg:pe-12.5 md:pt-10 md:pe-7.5 md:pb-5 pb-3.75 flex flex-col items-start justify-start relative z-1 w-full rounded-xxl">
-									<div className="lg:mb-8.75 mb-5">
-										<div className="relative z-1">
-											<p className="leading-[1.7] xl:text-[22px] lg:text-lg md:text-base text-2sm text-secondary text-center w-4/5 m-auto max-lg:mt-5 max-md:mt-2.5!">Symptoms of dry eye syndrome may affect one or both eyes and often include: burning or gritty feeling in the eyes, mucus in the Symptoms of dry eye syndrome may affect one or both eyes and often include: burning or gritty feeling in the eyes, mucus in the </p>
-										</div>
-									</div>
-									<div className="m-auto">
-										<div className="flex items-center sm:gap-3 gap-1.25 justify-center mb-5">
-											<h5 className="text-xl">Nashid Martines,</h5>
-											<span className="text-lg">Firefighter</span>
-										</div>		
-									</div>		
-								</div>
-								
-							</div>
-						</div>
-						<div className="swiper-slide !p-2.5">
-							<div className="flex relative z-1 h-full flex-col justify-center items-center">
-								<div className="min-w-20 size-20 lg:rounded-full rounded-xxl sm:rounded-ee-[100px] overflow-hidden">
-									<img src="/assets/images/testimonial/large/img3.webp" alt="" className="size-full object-cover" />
-								</div>	
-								<div className="lg:p-7.5 lg:pt-5.5 lg:pe-12.5 md:pt-10 md:pe-7.5 md:pb-5 pb-3.75 flex flex-col items-start justify-start relative z-1 w-full rounded-xxl">
-									<div className="lg:mb-8.75 mb-5">
-										<div className="relative z-1">
-											<p className="leading-[1.7] xl:text-[22px] lg:text-lg md:text-base text-2sm text-secondary text-center w-4/5 m-auto max-lg:mt-5 max-md:mt-2.5!">Symptoms of dry eye syndrome may affect one or both eyes and often include: burning or gritty feeling in the eyes, mucus in the Symptoms of dry eye syndrome may affect one or both eyes and often include: burning or gritty feeling in the eyes, mucus in the </p>
-										</div>
-									</div>
-									<div className="m-auto">
-										<div className="flex items-center sm:gap-3 gap-1.25 justify-center mb-5">
-											<h5 className="text-xl">Sarah Thompson,</h5>
-											<span className="text-lg">Photographer</span>
-										</div>		
-									</div>		
-								</div>
-								
-							</div>
-						</div>
+                        ))}
 					</div>
 					<div className="testimonial-pagination-swiper3 swiper-pagination style-3"></div>
 				</div>

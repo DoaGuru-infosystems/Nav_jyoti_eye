@@ -4,6 +4,7 @@ import WhyChooseUsSection from '../components/shared/WhyChooseUsSection';
 
 import { useState } from 'react';
 import { saveAppointment } from '../data/dataStore';
+import { siteData } from '../data/siteData';
 
 export default function AppointmentPage() {
   const appointImg6 = ""; // "/assets/images/about/img6.webp"
@@ -150,68 +151,9 @@ export default function AppointmentPage() {
 
       <WhyChooseUsSection />
 
-      <section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 sm:pt-12.5 pt-10 pb-10 ">
-        <div className="container">
-          <div className="row content-wrapper">
-            <div className="w-full">
-              <div className="sm:mb-7.5 mb-5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-                <h2 className="2xxl:text-4xxl lg:text-[38px] sm:text-[32px] text-2xxl font-bold capitalize mb-2.5">All Locations</h2>
-                <p className="sm:text-lg text-base font-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-              <div className="row">
-                <div className="xl:w-1/3 md:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-                  <div className="bg-white rounded-xxl shadow-1 transition-all p-2.5 h-full flex flex-col duration-500 hover:-translate-y-2">
-                    <div className="min-w-75 h-75 rounded-2xl overflow-hidden">
-                      <img src="/assets/images/map/map2.webp" alt="" className="size-full object-cover" />
-                    </div>
-                    <div className="p-6.25">
-                      <h3 className="flex items-center gap-2.5 text-[20px] font-semibold font-base">
-                        Canada
-                      </h3>
-                      <p className="mb-2.5">Address:</p>
-                      <p className="mb-0">123 Health Way, Suite 456 Goodland, 78910 United States</p>
-                      <p className="text-heading font-normal mb-2.5">Service</p>
-                      <a href="#" onClick={ e => e.preventDefault() }>Mon -Sat: 7:00 - 17:00</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="xl:w-1/3 md:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
-                  <div className="bg-white rounded-xxl shadow-1 transition-all p-2.5 h-full flex flex-col duration-500 hover:-translate-y-2">
-                    <div className="min-w-75 h-75 rounded-2xl overflow-hidden">
-                      <img src="/assets/images/map/map1.webp" alt="" className="size-full object-cover" />
-                    </div>
-                    <div className="p-6.25">
-                      <h3 className="flex items-center gap-2.5 text-[20px] font-semibold font-base">
-                        United State
-                      </h3>
-                      <p className="mb-2.5">Address:</p>
-                      <p className="mb-0">123 Health Way, Suite 456 Goodland, 78910 United States</p>
-                      <p className="text-heading font-normal mb-2.5">Service</p>
-                      <a href="#" onClick={ e => e.preventDefault() }>Mon -Sat: 7:00 - 17:00</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="xl:w-1/3 md:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s">
-                  <div className="bg-white rounded-xxl shadow-1 transition-all p-2.5 h-full flex flex-col duration-500 hover:-translate-y-2">
-                    <div className="min-w-75 h-75 rounded-2xl overflow-hidden">
-                      <img src="/assets/images/map/map2.webp" alt="" className="size-full object-cover" />
-                    </div>
-                    <div className="p-6.25">
-                      <h3 className="flex items-center gap-2.5 text-[20px] font-semibold font-base">
-                        Canada
-                      </h3>
-                      <p className="mb-2.5">Address:</p>
-                      <p className="mb-0">123 Health Way, Suite 456 Goodland, 78910 United States</p>
-                      <p className="text-heading font-normal mb-2.5">Service</p>
-                      <a href="#" onClick={ e => e.preventDefault() }>Mon -Sat: 7:00 - 17:00</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+		<div className="map-wrapper xl:h-125 sm:h-100 h-62.5 wow fadeIn">
+			<iframe className="size-full" src={siteData.hospitals[0].mapUrl} style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+		</div>
 
 			<FaqSection className="bg-light" />
     </>
