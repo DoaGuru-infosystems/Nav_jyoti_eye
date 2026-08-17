@@ -20,7 +20,7 @@ export function useLightGallery(options = {}) {
         lgInstance.current = null;
       }
     };
-  }, [options]);
+  }, [JSON.stringify(options)]);
 
   return galleryRef;
 }

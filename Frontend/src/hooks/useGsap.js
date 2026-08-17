@@ -20,11 +20,10 @@ function createStickyHeader(smoother) {
   const header = document.querySelector('.site-header');
   if (!header) return () => {};
 
-  let rafId;
   const headerHeight = header.offsetHeight || 80;
   const sidebarSticky = document.querySelector('.sidebar-sticky');
-
-  const tick = () => {
+  let ticking = false;
+  const update = () => {
     const scrollY =
       typeof smoother?.scrollTop === 'function'
         ? smoother.scrollTop()
@@ -34,12 +33,23 @@ function createStickyHeader(smoother) {
     if (sidebarSticky) {
       sidebarSticky.style.top = scrollY > 100 ? `${headerHeight + 10}px` : '60%';
     }
-    rafId = requestAnimationFrame(tick);
+    ticking = false;
   };
 
-  rafId = requestAnimationFrame(tick);
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // If ScrollSmoother is active, it might not fire native scroll events on touch if normalizeScroll is true.
+  // ScrollSmoother handles its own updates, but native scroll usually still syncs.
+  update();
+
   return () => {
-    if (rafId != null) cancelAnimationFrame(rafId);
+    window.removeEventListener('scroll', onScroll);
   };
 }
 
