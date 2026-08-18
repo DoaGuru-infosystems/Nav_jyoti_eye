@@ -50,7 +50,20 @@ exports.createAppointment = async (req, res) => {
 exports.getAppointments = async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM appointments ORDER BY created_at DESC');
-    return res.json(rows);
+    
+    // Explicitly map database records to separate DB schema from frontend response
+    const mappedRows = rows.map(r => ({
+      id: r.id,
+      name: r.name,
+      email: r.email,
+      phone: r.phone,
+      problem: r.problem,
+      appointmentDate: r.appointment_date ? new Date(r.appointment_date).toISOString() : null,
+      date: r.created_at ? new Date(r.created_at).toISOString() : null,
+      source: r.source
+    }));
+
+    return res.json(mappedRows);
   } catch (error) {
     console.error('Get appointments error:', error);
     return res.status(500).json({ error: 'Internal server error' });

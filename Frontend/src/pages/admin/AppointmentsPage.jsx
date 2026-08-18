@@ -69,15 +69,15 @@ const AppointmentsPage = () => {
                                         <td className="p-4 px-6 align-top">
                                             <div className="flex items-center gap-2 text-gray-800 font-medium">
                                                 <i className="feather icon-clock text-green-500"></i>
-                                                {apt.appointment_date ? new Date(apt.appointment_date).toLocaleDateString() : 'Not specified'}
+                                                {apt.appointmentDate ? new Date(apt.appointmentDate).toLocaleDateString() : 'Not specified'}
                                             </div>
                                         </td>
                                         <td className="p-4 px-6 align-top">
                                             <div className="text-sm text-gray-600">
-                                                {new Date(apt.created_at).toLocaleDateString()}
+                                                {new Date(apt.date).toLocaleDateString()}
                                             </div>
                                             <div className="text-xs text-gray-400 mt-1">
-                                                {new Date(apt.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                                {new Date(apt.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                                             </div>
                                         </td>
                                         <td className="p-4 px-6 align-middle text-center">
