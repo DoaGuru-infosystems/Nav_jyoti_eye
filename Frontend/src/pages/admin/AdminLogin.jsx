@@ -18,9 +18,10 @@ const AdminLogin = () => {
         
         try {
             const response = await loginAdmin(username, password);
-            const data = await response.json();
+                 console.log(response.data);
+            const data = await response.data;
             
-            if (response.ok && data.success) {
+            if (data.success== true) {
                 setAdminAuth('true');
                 navigate(from, { replace: true });
             } else {
@@ -65,11 +66,11 @@ const AdminLogin = () => {
                         Login
                     </button>
                 </form>
-                <div className="mt-4 text-center text-sm text-gray-500 bg-gray-50 p-3 rounded">
+                {/* <div className="mt-4 text-center text-sm text-gray-500 bg-gray-50 p-3 rounded">
                     <p className="mb-1"><strong>Demo Credentials:</strong></p>
                     <p>Username: <code className="bg-gray-200 px-1 py-0.5 rounded text-gray-700">admin</code></p>
                     <p>Password: <code className="bg-gray-200 px-1 py-0.5 rounded text-gray-700">admin123</code></p>
-                </div>
+                </div> */}
             </div>
         </div>
     );

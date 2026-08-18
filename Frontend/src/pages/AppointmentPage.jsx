@@ -21,9 +21,9 @@ export default function AppointmentPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    saveAppointment({
+    const result = await saveAppointment({
       name: formData.dzName,
       email: formData.dzEmail,
       phone: formData.dzPhoneNumber,
@@ -31,8 +31,13 @@ export default function AppointmentPage() {
       problem: formData.dzProblem,
       source: 'appointment_page'
     });
-    setStatus('Appointment booked successfully!');
-    setFormData({ dzName: '', dzEmail: '', dzPhoneNumber: '', dzDate: '', dzProblem: '' });
+    
+    if (result && result.success) {
+      setStatus('Appointment booked successfully!');
+      setFormData({ dzName: '', dzEmail: '', dzPhoneNumber: '', dzDate: '', dzProblem: '' });
+    } else {
+      setStatus(result ? result.message : 'Error booking appointment');
+    }
   };
 
   return (

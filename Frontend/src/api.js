@@ -50,8 +50,13 @@ export const getAppointments = async () => {
 
 export const saveAppointment = async (appointment) => {
     try {
-        await api.post(`/appointments`, appointment);
+        const response = await api.post(`/appointments`, appointment);
+        return { success: true, data: response.data };
     } catch (error) {
         console.error('Error saving appointment:', error);
+        if (error.response && error.response.data && error.response.data.error) {
+            return { success: false, message: error.response.data.error };
+        }
+        return { success: false, message: 'Server error. Please try again later.' };
     }
 };

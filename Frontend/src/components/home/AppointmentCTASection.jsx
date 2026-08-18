@@ -16,17 +16,28 @@ export default function AppointmentCTASection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    saveAppointment({
+    const result = await saveAppointment({
       name: formData.dzName,
       email: formData.dzEmail,
       phone: formData.dzNumber,
       appointment_date: formData.dateTime,
+      problem: "na",
       source: 'home'
     });
-    setStatus('Appointment booked successfully!');
-    setFormData({ dzName: '', dzEmail: '', dzNumber: '', dateTime: '' });
+    
+    if (result && result.success) {
+      setStatus('Appointment booked successfully!');
+      setFormData({
+        dzName: '',
+        dzEmail: '',
+        dzNumber: '',
+        dateTime: ''
+      });
+    } else {
+      setStatus(result ? result.message : 'Error booking appointment');
+    }
   };
 
   return (

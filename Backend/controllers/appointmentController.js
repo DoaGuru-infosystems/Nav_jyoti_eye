@@ -29,10 +29,9 @@ exports.createAppointment = async (req, res) => {
       return res.status(400).json({ error: 'Invalid appointment date or date is in the past' });
     }
 
-    if (source === 'home') {
-      problem = null;
-    }
-
+    // if (source === 'home') {
+    //   problem = null;
+    // }
     const [result] = await db.execute(
       'INSERT INTO appointments (name, email, phone, problem, appointment_date, source) VALUES (?, ?, ?, ?, ?, ?)',
       [name, email, phone, problem || null, appointment_date, source]
@@ -51,19 +50,7 @@ exports.createAppointment = async (req, res) => {
 exports.getAppointments = async (req, res) => {
   try {
     const [rows] = await db.query('SELECT * FROM appointments ORDER BY created_at DESC');
-    // Map database fields to match frontend expected fields if needed, 
-    // frontend currently uses `date` for created_at, `appointmentDate`, `department` etc.
-    const mappedRows = rows.map(r => ({
-      id: r.id,
-      name: r.name,
-      email: r.email,
-      phone: r.phone,
-      appointmentDate: r.appointment_date,
-      date: r.created_at,
-      department: r.source === 'home' ? 'Home Page' : 'Appointment Page',
-      problem: r.problem
-    }));
-    return res.json(mappedRows);
+    return res.json(rows);
   } catch (error) {
     console.error('Get appointments error:', error);
     return res.status(500).json({ error: 'Internal server error' });

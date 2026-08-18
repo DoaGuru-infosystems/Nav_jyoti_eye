@@ -36,7 +36,7 @@ const AppointmentsPage = () => {
                         <thead>
                             <tr className="bg-gray-50 border-b border-gray-200 text-sm font-medium text-gray-500 uppercase tracking-wider">
                                 <th className="p-4 px-6">Patient Info</th>
-                                <th className="p-4 px-6">Department</th>
+                                <th className="p-4 px-6">Problem</th>
                                 <th className="p-4 px-6">Preferred Date</th>
                                 <th className="p-4 px-6">Submitted On</th>
                                 <th className="p-4 px-6 text-center">Action</th>
@@ -62,22 +62,22 @@ const AppointmentsPage = () => {
                                             </div>
                                         </td>
                                         <td className="p-4 px-6 align-top">
-                                            <span className="inline-flex items-center px-3 py-1 rounded-md text-sm font-medium bg-blue-50 text-blue-700 border border-blue-100">
-                                                {apt.department || 'Not specified'}
+                                            <span className="inline-block text-sm text-gray-700 bg-gray-100 rounded px-2 py-1 max-w-[200px] truncate" title={apt.problem}>
+                                                {apt.problem && apt.problem !== 'na' ? apt.problem : 'Not specified'}
                                             </span>
                                         </td>
                                         <td className="p-4 px-6 align-top">
                                             <div className="flex items-center gap-2 text-gray-800 font-medium">
                                                 <i className="feather icon-clock text-green-500"></i>
-                                                {apt.appointmentDate || 'Not specified'}
+                                                {apt.appointment_date ? new Date(apt.appointment_date).toLocaleDateString() : 'Not specified'}
                                             </div>
                                         </td>
                                         <td className="p-4 px-6 align-top">
                                             <div className="text-sm text-gray-600">
-                                                {new Date(apt.date).toLocaleDateString()}
+                                                {new Date(apt.created_at).toLocaleDateString()}
                                             </div>
                                             <div className="text-xs text-gray-400 mt-1">
-                                                {new Date(apt.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                                {new Date(apt.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                                             </div>
                                         </td>
                                         <td className="p-4 px-6 align-middle text-center">
