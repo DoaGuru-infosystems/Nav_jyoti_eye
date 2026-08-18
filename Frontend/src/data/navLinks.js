@@ -31,10 +31,7 @@ const navLinks = [
     label: 'Hospitals',
     href: '/hospitals',
   },
-  {
-    label: 'Appointment',
-    href: '/appointment',
-  },
+
   {
     label: 'Contact Us',
     href: '/contact-us',

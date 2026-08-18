@@ -3,7 +3,7 @@ import FaqSection from '../components/shared/FaqSection';
 import WhyChooseUsSection from '../components/shared/WhyChooseUsSection';
 
 import { useState } from 'react';
-import { saveAppointment } from '../data/dataStore';
+import { saveAppointment } from '../api';
 import { siteData } from '../data/siteData';
 
 export default function AppointmentPage() {
@@ -13,8 +13,7 @@ export default function AppointmentPage() {
     dzEmail: '',
     dzPhoneNumber: '',
     dzDate: '',
-    dzTime: '',
-    department: 'General'
+    dzProblem: ''
   });
   const [status, setStatus] = useState('');
 
@@ -28,11 +27,12 @@ export default function AppointmentPage() {
       name: formData.dzName,
       email: formData.dzEmail,
       phone: formData.dzPhoneNumber,
-      appointmentDate: `${formData.dzDate} ${formData.dzTime}`,
-      department: formData.department
+      appointment_date: formData.dzDate,
+      problem: formData.dzProblem,
+      source: 'appointment_page'
     });
     setStatus('Appointment booked successfully!');
-    setFormData({ dzName: '', dzEmail: '', dzPhoneNumber: '', dzDate: '', dzTime: '', department: 'General' });
+    setFormData({ dzName: '', dzEmail: '', dzPhoneNumber: '', dzDate: '', dzProblem: '' });
   };
 
   return (
@@ -89,38 +89,9 @@ export default function AppointmentPage() {
                         <input name="dzDate" value={formData.dzDate} onChange={handleChange} required type="date" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Date" />
                       </div>
                     </div>
-                    <div className="sm:w-1/2 w-full mb-7.5">
+                    <div className="w-full mb-7.5">
                       <div className="relative">
-                        <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-clock"></i></span>
-                        <input name="dzTime" value={formData.dzTime} onChange={handleChange} required type="time" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Time" />
-                      </div>
-                    </div>
-                    <div className="sm:w-1/2 w-full">
-                      <div className="form-check2 mb-1.25">
-                        <img className="size-4.5 bg-transparent border border-white appearance-none rounded-xs me-2 my-1 align-top bg-center bg-no-repeat checked:bg-primary checked:bg-input-check" type="checkbox" value="" id="checkBox1" />
-                        <label className="text-[#BED2E7] text-base inline" htmlFor="checkBox1">Skin Allergy Testing</label>
-                      </div>
-                      <div className="form-check2 mb-1.25">
-                        <img className="size-4.5 bg-transparent border border-white appearance-none rounded-xs me-2 my-1 align-top bg-center bg-no-repeat checked:bg-primary checked:bg-input-check" type="checkbox" value="" id="checkBox2" />
-                        <label className="text-[#BED2E7] text-base inline" htmlFor="checkBox2">Laser Treatments</label>
-                      </div>
-                      <div className="form-check2 mb-1.25">
-                        <img className="size-4.5 bg-transparent border border-white appearance-none rounded-xs me-2 my-1 align-top bg-center bg-no-repeat checked:bg-primary checked:bg-input-check" type="checkbox" value="" id="checkBox3" />
-                        <label className="text-[#BED2E7] text-base inline" htmlFor="checkBox3">Hair Fall Treatments</label>
-                      </div>
-                    </div>
-                    <div className="sm:w-1/2 w-full mb-7.5">
-                      <div className="form-check2 mb-1.25">
-                        <img className="size-4.5 bg-transparent border border-white appearance-none rounded-xs me-2 my-1 align-top bg-center bg-no-repeat checked:bg-primary checked:bg-input-check" type="checkbox" value="" id="checkBox4" />
-                        <label className="text-[#BED2E7] text-base inline" htmlFor="checkBox4">Plastic Surgery</label>
-                      </div>
-                      <div className="form-check2 mb-1.25">
-                        <img className="size-4.5 bg-transparent border border-white appearance-none rounded-xs me-2 my-1 align-top bg-center bg-no-repeat checked:bg-primary checked:bg-input-check" type="checkbox" value="" id="checkBox5" />
-                        <label className="text-[#BED2E7] text-base inline" htmlFor="checkBox5">Acne Scar Treatment</label>
-                      </div>
-                      <div className="form-check2 mb-1.25">
-                        <img className="size-4.5 bg-transparent border border-white appearance-none rounded-xs me-2 my-1 align-top bg-center bg-no-repeat checked:bg-primary checked:bg-input-check" type="checkbox" value="" id="checkBox6" />
-                        <label className="text-[#BED2E7] text-base inline" htmlFor="checkBox6">Pedicure</label>
+                        <textarea name="dzProblem" value={formData.dzProblem} onChange={handleChange} rows="4" className="py-3.75 ps-4 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Describe your problem (optional)"></textarea>
                       </div>
                     </div>
                     <div className="w-full mt-2.5">

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { saveLead } from '../data/dataStore';
+import { saveLead } from '../api';
 import { siteData } from '../data/siteData';
 
 export default function ContactPage() {

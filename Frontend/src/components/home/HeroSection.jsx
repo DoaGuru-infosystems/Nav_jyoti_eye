@@ -11,7 +11,7 @@ export default function HeroSection() {
 								<div className="lg:w-5/12 w-full mb-7.5">
 									<div className="2xxl:ps-25 2xxl:ms-0 xxl:ms-10 xl:ms-7.5">
 										<h1 className="2xxl:text-8xl xl:text-6xl lg:text-[48px] sm:text-[38px] text-[32px] mb-1.25 relative z-1 after:absolute md:after:-top-5 md:after:-left-10.75 md:after:size-12.5 after:-top-6.5 ltr:after:-left-6.25 rtl:after:-right-6.25 after:size-7.5 max-md:after:bg-contain after:bg-no-repeat after:-z-1 after:bg-heading-after after:rotate-y-180 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Your vision is our mission</h1>
-										<p className="text-lg sm:mb-12.5 mb-5">Lorem Ipsum has been the idustry standard dummy text ecer since the 1500s,</p>
+										<p className="text-lg sm:mb-12.5 mb-5">Dedicated to providing world-class eye care with advanced technology and compassionate specialists, ensuring your vision is protected.</p>
 										<div className="sm:flex items-center gap-7.5 wow fadeInUp" data-wow-delay="0.8s">
 											<a href="/appointment" className="btn btn-primary mb-4">
 												Appointment

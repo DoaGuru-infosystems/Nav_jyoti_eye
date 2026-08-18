@@ -103,7 +103,6 @@ function NavItem({ item, depth = 0 }) {
 /* ── Header ─────────────────────────────────────────────────────────────── */
 export default function Header() {
   const headerRef = useRef(null);
-  const [searchOpen, setSearchOpen] = useState(false);
 
   // Wire xmenu for mobile hamburger + desktop mega-menu.
   useXMenu(headerRef);
@@ -186,17 +185,7 @@ export default function Header() {
                   </div>
                 </li>
 
-                {/* Search toggle */}
-                <li className="inline-block">
-                  <button
-                    type="button"
-                    className="min-w-10 flex align-center justify-center relative"
-                    onClick={() => setSearchOpen(true)}
-                    aria-label="Open search"
-                  >
-                    <i className="feather icon-search text-[28px]" />
-                  </button>
-                </li>
+
 
                 {/* Appointment CTA */}
                 <li className="inline-block max-xl:hidden max-sm:!block">
@@ -209,36 +198,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* ── Search overlay ── */}
-          {searchOpen && (
-            <div
-              className="fixed top-0 left-0 size-full bg-black/80 z-[9999999] flex items-center justify-center p-8"
-              id="searchOverlay4"
-            >
-              <form className="w-full" onSubmit={e => e.preventDefault()}>
-                <div className="relative max-w-3xl w-3xl mx-auto">
-                  <input
-                    name="search"
-                    type="text"
-                    autoFocus
-                    className="h-14 py-4 px-5 border border-white/20 text-white w-full outline-none duration-300 focus:border-primary bg-transparent"
-                    placeholder="Type to search"
-                  />
-                  <button type="submit" className="absolute right-0 top-1/2 -translate-y-1/2 h-full w-10 flex items-center">
-                    <i className="fa fa-search text-base text-white" />
-                  </button>
-                </div>
-                <button
-                  type="button"
-                  className="absolute right-8 top-8 text-white text-xl opacity-80 size-8 cursor-pointer"
-                  onClick={() => setSearchOpen(false)}
-                  aria-label="Close search"
-                >
-                  <i className="fa fa-close" />
-                </button>
-              </form>
-            </div>
-          )}
+
 
         </div>
       </div>

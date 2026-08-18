@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { saveAppointment } from '../../data/dataStore';
+import { saveAppointment } from '../../api';
 import doctorImg from '../../assets/images/vaibhav-vivian-3HIroMoyre8-unsplash-removebg-preview.png';
 
 export default function AppointmentCTASection() {
@@ -8,8 +8,7 @@ export default function AppointmentCTASection() {
     dzName: '',
     dzEmail: '',
     dzNumber: '',
-    dateTime: '',
-    doctorName: 'Doctor Name'
+    dateTime: ''
   });
   const [status, setStatus] = useState('');
 
@@ -23,11 +22,11 @@ export default function AppointmentCTASection() {
       name: formData.dzName,
       email: formData.dzEmail,
       phone: formData.dzNumber,
-      appointmentDate: formData.dateTime,
-      department: formData.doctorName // Mapping doctor name to department for simplicity
+      appointment_date: formData.dateTime,
+      source: 'home'
     });
     setStatus('Appointment booked successfully!');
-    setFormData({ dzName: '', dzEmail: '', dzNumber: '', dateTime: '', doctorName: 'Doctor Name' });
+    setFormData({ dzName: '', dzEmail: '', dzNumber: '', dateTime: '' });
   };
 
   return (
@@ -46,7 +45,7 @@ export default function AppointmentCTASection() {
                                             {status && <div className="text-green-300 mb-4">{status}</div>}
                                         </div>
 										<div className="row items-end md:[--tw-gutter-x:3rem]! [--tw-gutter-y:3rem]!">
-											<div className="xl:w-1/3 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
+											<div className="xl:w-1/2 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
 												<div className="relative">
 													<input name="dzName" value={formData.dzName} onChange={handleChange} required type="text" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Name" />
 													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
@@ -57,7 +56,7 @@ export default function AppointmentCTASection() {
 													</span>
 												</div>
 											</div>
-											<div className="xl:w-1/3 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
+											<div className="xl:w-1/2 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 												<div className="relative">
 													<input name="dzEmail" value={formData.dzEmail} onChange={handleChange} required type="email" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Email" />
 													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
@@ -70,7 +69,7 @@ export default function AppointmentCTASection() {
 											</div>
 											<div className="xl:w-1/3 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dzNumber" value={formData.dzNumber} onChange={handleChange} required type="number" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Phone Number" />
+													<input name="dzNumber" value={formData.dzNumber} onChange={handleChange} required type="text" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Phone Number" />
 													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
 														<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M15.7422 0.916992C20.06 1.39649 23.4714 4.80316 23.9555 9.12099" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -83,7 +82,7 @@ export default function AppointmentCTASection() {
 
 											<div className="xl:w-1/3 sm:w-1/2 w-full  wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dateTime" value={formData.dateTime} onChange={handleChange} required type="text" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white flatpickr1" id="dateTimePickerOnly" placeholder="Date" />
+													<input name="dateTime" value={formData.dateTime} onChange={handleChange} required type="date" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Date" />
 													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
 														<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M3.60938 11.9608H24.404" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -101,26 +100,6 @@ export default function AppointmentCTASection() {
 												</div>
 											</div>
 											
-											<div className="xl:w-1/3 sm:w-1/2 w-full  wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="0.8s">
-												<div className="relative custom-select icon-select">
-													<select name="doctorName" value={formData.doctorName} onChange={handleChange} className="dynamic-select bg-transparent focus:outline-none">
-														<option value="Doctor Name" disabled>Doctor Name</option>
-														<option value="Nashid Martines">Nashid Martines</option>
-														<option value="Kenneth Fong">Kenneth Fong</option>
-													</select>
-													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
-														<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M20.8672 12.713C22.4947 12.4843 23.7477 11.089 23.7512 9.39851C23.7512 7.73251 22.5367 6.35118 20.9442 6.08984" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-															<path d="M23.0156 16.625C24.5918 16.8607 25.692 17.4125 25.692 18.55C25.692 19.3328 25.174 19.8415 24.3363 20.1612" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-															<path fillRule="evenodd" clipRule="evenodd" d="M13.8662 17.1074C10.1166 17.1074 6.91406 17.6756 6.91406 19.9448C6.91406 22.2128 10.0967 22.7973 13.8662 22.7973C17.6159 22.7973 20.8172 22.2349 20.8172 19.9646C20.8172 17.6943 17.6357 17.1074 13.8662 17.1074Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-															<path fillRule="evenodd" clipRule="evenodd" d="M13.8696 13.869C16.3301 13.869 18.3251 11.8752 18.3251 9.41351C18.3251 6.95301 16.3301 4.95801 13.8696 4.95801C11.4091 4.95801 9.4141 6.95301 9.4141 9.41351C9.40476 11.8658 11.3846 13.8608 13.8369 13.869H13.8696Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-															<path d="M6.86838 12.713C5.23971 12.4843 3.98788 11.089 3.98438 9.39851C3.98438 7.73251 5.19887 6.35118 6.79138 6.08984" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-															<path d="M4.7154 16.625C3.13923 16.8607 2.03906 17.4125 2.03906 18.55C2.03906 19.3328 2.55706 19.8415 3.39473 20.1612" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-														</svg>
-
-													</span>
-												</div>
-											</div>
 											<div className="xl:w-1/3 sm:w-1/2 w-full  wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s">
 												<button type="submit" name="submit" value="submit" className="btn w-full justify-center btn-white text-primary">
 													Book Appointment <i className="feather icon-arrow-right ms-1"></i>

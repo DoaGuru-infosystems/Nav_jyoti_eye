@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
-import { getLeads } from '../../data/dataStore';
+import { getLeads } from '../../api';
 
 const ContactLeadsPage = () => {
     const [leads, setLeads] = useState([]);
 
     useEffect(() => {
-        setLeads(getLeads().reverse());
+        const fetchData = async () => {
+            const data = await getLeads();
+            setLeads(Array.isArray(data) ? data.reverse() : []);
+        };
+        fetchData();
     }, []);
 
     return (

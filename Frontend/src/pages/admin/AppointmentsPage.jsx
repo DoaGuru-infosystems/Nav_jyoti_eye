@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
-import { getAppointments } from '../../data/dataStore';
+import { getAppointments } from '../../api';
 
 const AppointmentsPage = () => {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        setAppointments(getAppointments().reverse());
+        const fetchData = async () => {
+            const data = await getAppointments();
+            setAppointments(Array.isArray(data) ? data.reverse() : []);
+        };
+        fetchData();
     }, []);
 
     return (

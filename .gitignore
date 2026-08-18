@@ -1,2 +1,10 @@
 graphify-out/
 graphify-out
+
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local

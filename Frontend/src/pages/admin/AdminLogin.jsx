@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { setAdminAuth } from '../../components/admin/utils/auth';
+import { loginAdmin } from '../../api';
 
 const AdminLogin = () => {
     const [username, setUsername] = useState('');
@@ -11,14 +12,23 @@ const AdminLogin = () => {
 
     const from = location.state?.from?.pathname || '/admin/leads';
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        // Simple hardcoded credentials for now
-        if (username === 'admin' && password === 'admin123') {
-            setAdminAuth(true);
-            navigate(from, { replace: true });
-        } else {
-            setError('Invalid username or password');
+        setError('');
+        
+        try {
+            const response = await loginAdmin(username, password);
+            const data = await response.json();
+            
+            if (response.ok && data.success) {
+                setAdminAuth('true');
+                navigate(from, { replace: true });
+            } else {
+                setError(data.error || 'Invalid username or password');
+            }
+        } catch (err) {
+            console.error('Login error:', err);
+            setError('Could not connect to server. Please try again later.');
         }
     };
 
