@@ -3,6 +3,9 @@ import AboutSection from '../components/shared/AboutSection';
 import TeamSection from '../components/shared/TeamSection';
 import TestimonialSection from '../components/shared/TestimonialSection';
 import { siteData } from '../data/siteData';
+import bannerImg from '../assets/images/navjyoti/abootus-banner.png';
+import imgDoctor from '../assets/images/home/doctor.png';
+import weCareImg from '../assets/images/navjyoti/We-Care.png';
 
 export default function AboutPage() {
 	const aboutImg6 = ""; 
@@ -15,7 +18,7 @@ export default function AboutPage() {
 
 	return (
 		<>
-			<div className="2xxl:min-h-125 lg:min-h-112.5 md:min-h-full sm:min-h-87.5 min-h-75 bg-cover bg-center bg-light relative z-1 w-full overflow-hidden pb-7.5 before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:size-full before:bg-primary before:opacity-70" style={ { backgroundImage: 'url(/assets/images/banner/bnr1.webp)' } }>
+			<div className="2xxl:min-h-125 lg:min-h-112.5 md:min-h-full sm:min-h-87.5 min-h-75 bg-cover bg-center bg-light relative z-1 w-full overflow-hidden pb-7.5 before:absolute ltr:before:left-0 rtl:before:right-0 before:top-0 before:size-full before:bg-primary before:opacity-70" style={ { backgroundImage: `url(${bannerImg})` } }>
 				<div className="container relative z-1 h-full table">
 					<div className="table-cell 2xxl:h-125 lg:h-112.5 md:h-95 sm:h-87.5 h-75 align-middle pt-22.5 pb-5 text-center">
 						<h1 className="2xxl:text-8xl xl:text-6xxl md:text-[48px] text-[32px] font-semibold mb-3.75 break-word text-white wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">About Us</h1>
@@ -29,14 +32,11 @@ export default function AboutPage() {
 				</div>
 			</div>
 
-			<AboutSection 
-				archedImage={aboutArchedImage || "https://images.pexels.com/photos/9929038/pexels-photo-9929038.jpeg?auto=compress&cs=tinysrgb&w=550&h=530&fit=crop"} 
-				badgeImage={aboutBadgeImage || "https://images.pexels.com/photos/8949024/pexels-photo-8949024.jpeg?auto=compress&cs=tinysrgb&w=550&h=530&fit=crop"} 
-			/>
+			<AboutSection />
 
 			<section className="2xxl:pt-25 md:pt-17.5 sm:pt-12.5 pt-10 relative z-1 bg-white" style={ { backgroundImage: 'url(/assets/images/background/bg7.webp)' } }>
 				<div className="container">
-					<div className="row content-wrapper style-43 items-end justify-center">
+					<div className="row content-wrapper style-43 items-center justify-center">
 						<div className="xl:w-1/2 w-full mb-7.5">
 							<div className="2xxl:mb-17.5 sm:mb-10">
 								<div className="sm:mb-7.5 mb-5">
@@ -69,8 +69,8 @@ export default function AboutPage() {
 						</div>
 						<div className="xl:w-1/2 lg:w-2/3 w-full">
 							<div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
-								<div className="relative z-1 md:ps-12.5 md:pe-25 px-7.5">
-									<img src={aboutImg6 || "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=475&h=745&fit=crop"} alt={doctor.name} className="w-full rounded-3xl" />
+								<div className="relative z-1 md:px-16 px-7.5">
+									<img src={imgDoctor || "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=475&h=745&fit=crop"} alt={doctor.name} className="w-full rounded-3xl" />
 								</div>
 								<div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-left-15 rtl:lg:-right-15 ltr:left-0 rtl:right-0 z-99 max-sm:hidden">
 									<div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">
@@ -108,7 +108,7 @@ export default function AboutPage() {
 						</div>
 						<div className="lg:w-5/12 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 							<div className="relative overflow-hidden xl:h-125 sm:h-50 h-62.5 sm:rounded-3xl rounded-xxl">
-								<img src={aboutImg10 || "https://images.pexels.com/photos/6749698/pexels-photo-6749698.jpeg?auto=compress&cs=tinysrgb&w=530&h=520&fit=crop"} alt="" className="size-full object-cover" />
+								<img src={weCareImg || "https://images.pexels.com/photos/6749698/pexels-photo-6749698.jpeg?auto=compress&cs=tinysrgb&w=530&h=520&fit=crop"} alt="" className="size-full object-cover" />
 							</div>
 						</div>
 					</div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
 				</div>
 			</section>
 
-			<TeamSection />
+			{/* <TeamSection /> */}
 
 			<TestimonialSection />
 

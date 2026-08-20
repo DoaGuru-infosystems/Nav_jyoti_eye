@@ -16,7 +16,7 @@ export default function HomePage() {
 				<AboutSection />
 				<ServicesSection />
 				<AppointmentCTASection />
-				<TeamSection />
+
 				<FaqSection />
 				<EyeDonationPledgeSection />
 				<WhyChooseUsSection />
