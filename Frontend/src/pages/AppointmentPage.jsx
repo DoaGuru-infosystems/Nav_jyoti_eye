@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import FaqSection from '../components/shared/FaqSection';
 import WhyChooseUsSection from '../components/shared/WhyChooseUsSection';
+import appointImg from "../assets/images/navjyoti/appointImg.png";
+
+
 
 import { useState } from 'react';
 import { saveAppointment } from '../api';
@@ -31,7 +34,7 @@ export default function AppointmentPage() {
       problem: formData.dzProblem,
       source: 'appointment_page'
     });
-    
+
     if (result && result.success) {
       setStatus('Appointment booked successfully!');
       setFormData({ dzName: '', dzEmail: '', dzPhoneNumber: '', dzDate: '', dzProblem: '' });
@@ -65,38 +68,38 @@ export default function AppointmentPage() {
                 <div>
                   <h2 className="sm:text-2xxl text-2xl text-white sm:mb-5 mb-3.75">Book Your Appointment</h2>
                 </div>
-                <form onSubmit={handleSubmit} className="dzForm">
+                <form onSubmit={ handleSubmit } className="dzForm">
                   <div className="dzFormMsg">
-                    {status && <div className="text-green-300 mb-4">{status}</div>}
+                    { status && <div className="text-green-300 mb-4">{ status }</div> }
                   </div>
                   <div className="row">
                     <div className="w-full mb-7.5">
                       <div className="relative">
                         <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-user"></i></span>
-                        <input name="dzName" value={formData.dzName} onChange={handleChange} required type="text" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Name" />
+                        <input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Name" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">
                       <div className="relative">
                         <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
-                        <input name="dzEmail" value={formData.dzEmail} onChange={handleChange} required type="email" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Email" />
+                        <input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Email" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">
                       <div className="relative">
                         <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-phone"></i></span>
-                        <input name="dzPhoneNumber" value={formData.dzPhoneNumber} onChange={handleChange} required type="text" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Phone Number" />
+                        <input name="dzPhoneNumber" value={ formData.dzPhoneNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Phone Number" />
                       </div>
                     </div>
                     <div className="sm:w-1/2 w-full mb-7.5">
                       <div className="relative">
                         <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-calendar"></i></span>
-                        <input name="dzDate" value={formData.dzDate} onChange={handleChange} required type="date" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Date" />
+                        <input name="dzDate" value={ formData.dzDate } onChange={ handleChange } required type="date" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Date" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">
                       <div className="relative">
-                        <textarea name="dzProblem" value={formData.dzProblem} onChange={handleChange} rows="4" className="py-3.75 ps-4 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Describe your problem (optional)"></textarea>
+                        <textarea name="dzProblem" value={ formData.dzProblem } onChange={ handleChange } rows="4" className="py-3.75 ps-4 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Describe your problem (optional)"></textarea>
                       </div>
                     </div>
                     <div className="w-full mt-2.5">
@@ -111,12 +114,12 @@ export default function AppointmentPage() {
             <div className="xl:w-1/2 lg:w-2/3 w-full">
               <div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
                 <div className="relative z-1 md:ps-12.5 md:pe-25 px-7.5">
-                  <img src={appointImg6 || "https://images.pexels.com/photos/8459972/pexels-photo-8459972.jpeg?auto=compress&cs=tinysrgb&w=430&h=600&fit=crop"} alt="" className="w-full" />
+                  <img src={ appointImg || "https://images.pexels.com/photos/8459972/pexels-photo-8459972.jpeg?auto=compress&cs=tinysrgb&w=430&h=600&fit=crop" } alt="" className="w-full" />
                 </div>
                 <div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-left-15 rtl:lg:-right-15 ltr:left-0 rtl:right-0 z-99 max-sm:hidden">
                   <div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">
-                    <span className="xl:text-5xxl text-3xxl font-bold text-primary"><span className="value counted" data-value="20">20</span>+</span>
-                    <span className="sm:text-lg text-base text-justify text-secondary font-semibold block font-title">Years Experienced</span>
+                    
+                    
                   </div>
                 </div>
               </div>
@@ -127,11 +130,11 @@ export default function AppointmentPage() {
 
       <WhyChooseUsSection />
 
-		<div className="map-wrapper xl:h-125 sm:h-100 h-62.5 wow fadeIn">
-			<iframe className="size-full" src={siteData.hospitals[0].mapUrl} style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-		</div>
+      <div className="map-wrapper xl:h-125 sm:h-100 h-62.5 wow fadeIn">
+        <iframe className="size-full" src={ siteData.hospitals[0].mapUrl } style={ { border: 0 } } allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
-			<FaqSection className="bg-light" />
+      <FaqSection className="bg-light" />
     </>
   );
 }
