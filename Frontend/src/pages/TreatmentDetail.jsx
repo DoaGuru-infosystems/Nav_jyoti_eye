@@ -37,7 +37,7 @@ const TreatmentDetail = () => {
                             <h3 className="text-xl font-semibold pb-2.5 relative mb-4 !text-primary after:absolute after:bottom-0 ltr:after:left-0 rtl:after:right-0 ltr:after:right-0 rtl:after:left-0 after:h-px after:bg-size-[10px_1px] after:bg-repeat-x after:bg-linear-(--title-gradient) wow fadeInUp" data-wow-delay="0.5s">Key Features</h3>
                             <ul className="flex flex-wrap text-secondary font-medium mb-8 wow fadeInUp" data-wow-delay="0.6s">
                                 { treatment.features?.map((feature, index) => (
-                                    <li key={ index } className="sm:w-1/2 w-full relative lg:p-1.25 p-1 lg:ps-7.5 ps-6.25 xl:text-base text-2sm before:absolute ltr:before:left-0 rtl:before:right-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
+                                    <li key={ index } className="sm:w-1/2 w-full relative lg:p-1.25 p-1 max-sm:mb-3 lg:ps-7.5 ps-6.25 xl:text-base text-2sm before:absolute ltr:before:left-0 rtl:before:right-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">
                                         { feature }
                                     </li>
                                 )) }
