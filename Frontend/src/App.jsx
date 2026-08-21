@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-
+import ScrollToTop from './components/shared/ScrollToTop';
 // Public Pages (Lazy loaded)
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/AboutPage'));
@@ -23,6 +23,7 @@ const AppointmentsPage = React.lazy(() => import('./pages/admin/AppointmentsPage
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div></div>}>
         <Routes>
           {/* Public Routes with Shared Layout */}

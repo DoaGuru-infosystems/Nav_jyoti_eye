@@ -14,12 +14,12 @@ import { siteData } from '../../data/siteData';
 
 const quickLinks = [
   { label: 'About Us', href: '/about-us' },
-  { label: 'Our Services', href: '/services' },
-  { label: 'Our Team', href: '/team' },
+  { label: 'Treatments', href: '/treatments/cataract-surgery' },
+  { label: 'Videos', href: '/eye-care-videos' },
   { label: 'Appointments', href: '/appointment' },
   { label: 'Contact Us', href: '/contact-us' },
-  { label: 'Terms and Conditions', href: '/terms' },
-  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms and Conditions', href: '/legal/terms-and-conditions' },
+  { label: 'Privacy Policy', href: '/legal/privacy-policy' },
 ];
 
 const contactInfo = [
@@ -29,10 +29,8 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/showcase/dexignzone', label: 'LinkedIn' },
-  { icon: 'fa-brands fa-instagram', href: 'https://www.instagram.com/dexignzone/', label: 'Instagram' },
-  { icon: 'fa-brands fa-facebook-f', href: 'https://www.facebook.com/dexignzone', label: 'Facebook' },
-  { icon: 'fa-brands fa-x-twitter', href: 'https://x.com/dexignzones', label: 'X / Twitter' },
+  { icon: 'fa-brands fa-instagram', href: 'https://www.instagram.com/navjyoti.hospital/', label: 'Instagram' },
+  { icon: 'fa-brands fa-facebook-f', href: 'https://www.facebook.com/profile.php?id=61592724337805', label: 'Facebook' },
 ];
 
 export default function Footer() {
@@ -50,20 +48,21 @@ export default function Footer() {
 
             {/* Brand column */}
             <div className="lg:w-1/3 w-full wow fadeInUp mb-7.5" data-wow-delay="0.2s" data-wow-duration="0.8s">
-              <div className="me-2">
-                <div className="mb-6">
-                  <Link to="/">
-                    <h2 className="text-white text-3xl font-bold tracking-wide">{siteData.branding.name}</h2>
+              <div className="me-2 max-lg:text-center max-lg:mx-auto">
+                <div className="mb-4">
+                  <Link to="/" className="inline-block bg-white p-1.5 rounded-lg mb-4">
+                    <img src="/assets/images/navjyoti-logo.png" alt={siteData.branding.name} className="w-[260px] sm:w-[320px] max-w-full" />
                   </Link>
+                  <h3 className="text-white text-2xl sm:text-3xl font-bold mb-2">Nav Jyoti Eye Hospital</h3>
                 </div>
-                <p className="text-lg font-light leading-[1.2] text-white/80 mb-5">
-                  {siteData.branding.slogan}
+                <p className="text-lg font-light leading-[1.4] text-white/90 mb-5">
+                  Your Vision, Our Mission. Providing world-class eye care with compassion and excellence.
                 </p>
 
 
                 {/* Social icons */}
                 <div className="dz-social-icon">
-                  <ul className="flex gap-1.5 sm:gap-2.5">
+                  <ul className="flex max-lg:justify-center gap-1.5 sm:gap-2.5">
                     {socialLinks.map(social => (
                       <li key={social.label} className="inline-block">
                         <a

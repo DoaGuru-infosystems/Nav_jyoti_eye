@@ -15,8 +15,8 @@ export const siteData = {
   contact: {
     primaryPhone: "+91 6268875304",
     secondaryPhone: "+91 6387225002",
-    primaryEmail: "info@navjyotieyehospital.com",
-    supportEmail: "support@navjyotieyehospital.com",
+    primaryEmail: "navjyotihospital00@gmail.com",
+    supportEmail: "navjyotihospital00@gmail.com",
     emergencyHelpline: "+91 6268875304",
   },
 
@@ -29,24 +29,14 @@ export const siteData = {
   // Social Links
   socialLinks: [
     {
-      platform: "LinkedIn",
-      url: "https://linkedin.com",
-      icon: "fa-brands fa-linkedin",
-    },
-    {
       platform: "Instagram",
-      url: "https://instagram.com",
+      url: "https://www.instagram.com/navjyoti.hospital/",
       icon: "fa-brands fa-instagram",
     },
     {
       platform: "Facebook",
-      url: "https://facebook.com",
+      url: "https://www.facebook.com/profile.php?id=61592724337805",
       icon: "fa-brands fa-facebook-f",
-    },
-    {
-      platform: "Twitter",
-      url: "https://x.com",
-      icon: "fa-brands fa-x-twitter",
     },
   ],
 

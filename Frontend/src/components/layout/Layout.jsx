@@ -22,6 +22,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Preloader from './Preloader';
 import ScrollToTop from './ScrollToTop';
+import FloatingButtons from '../shared/FloatingButtons';
 import useGsap from '../../hooks/useGsap';
 
 export default function Layout() {
@@ -54,6 +55,7 @@ export default function Layout() {
         </div>
       </div>
 
+      <FloatingButtons />
       <ScrollToTop />
     </div>
   );

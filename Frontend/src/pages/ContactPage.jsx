@@ -115,7 +115,7 @@ export default function ContactPage() {
 			<section className="2xxl:pt-25 md:pt-17.5 sm:pt-12.5 pt-10 relative z-1 bg-white" style={ { backgroundImage: 'url(/assets/images/background/bg7.webp)' } }>
 				<div className="container">
 					<div className="row content-wrapper style-43 items-center justify-between">
-						<div className="lg:w-1/2 w-full lg:order-1 order-2">
+						<div className="lg:w-1/2 w-full lg:order-1 order-2 max-sm:hidden">
 							<div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
 								<div className="relative z-1 md:px-16 px-7.5">
 									<img src={ Contactform } alt="" className="w-full" />
