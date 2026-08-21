@@ -17,7 +17,7 @@ export default function FaqSection({ className = '' }) {
 					<div className="xl:w-1/2 w-full xl:order-1 order-2">
 						<div className="relative">
 							<div className="relative z-1 2xl:-ms-25 max-md:px-7.5">
-								<img src={ faqImg || "https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=740&h=705&fit=crop" } alt="" className="rtl:rotate-y-180" />
+								<img src={ faqImg || "https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=740&h=705&fit=crop" } alt="" className="rtl:rotate-y-180 max-w-full" />
 							</div>
 						</div>
 					</div>

@@ -48,7 +48,7 @@ export default function TestimonialSection() {
 				*/}
 
 				{/* SociableKIT Google Reviews Widget */ }
-				<div className="sociablekit-container wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s" style={ { minHeight: '300px' } }>
+				<div className="sociablekit-container wow fadeInUp min-h-[300px]" data-wow-delay="0.4s" data-wow-duration="0.8s">
 					<iframe src={ `https://widgets.sociablekit.com/google-reviews/iframe/${widgetId}` } frameBorder="0" width="100%" height="550px"></iframe>
 				</div>
 			</div>

@@ -12,7 +12,7 @@ const HospitalsList = () => {
                 { siteData.hospitals.map((hospital, index) => (
                     <div key={ index } className="lg:w-1/3 md:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay={ `${0.2 + (index * 0.1)}s` }>
                         <div className="bg-white rounded-2xl shadow-7 overflow-hidden duration-200 box-hover [.box-hover.active]:shadow-lg h-full flex flex-col group">
-                            <div className="relative overflow-hidden h-60">
+                            <div className="relative overflow-hidden h-60 max-sm:h-48">
                                 <img src={ hospital.image } alt={ hospital.name } className="w-full h-full object-cover duration-500 group-hover:scale-110" />
                             </div>
                             <div className="p-7.5 flex-grow flex flex-col">
