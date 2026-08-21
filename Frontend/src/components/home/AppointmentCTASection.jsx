@@ -58,8 +58,8 @@ export default function AppointmentCTASection() {
 										<div className="row items-end md:[--tw-gutter-x:3rem]! [--tw-gutter-y:3rem]!">
 											<div className="xl:w-1/2 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Name" />
-													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
+													<input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-2sm max-sm:text-base text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Name" />
+													<span className="absolute text-2xl top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0">
 														<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path fillRule="evenodd" clipRule="evenodd" d="M13.9827 17.9043C9.47052 17.9043 5.61719 18.5865 5.61719 21.3187C5.61719 24.051 9.44608 24.7576 13.9827 24.7576C18.495 24.7576 22.3472 24.0743 22.3472 21.3432C22.3472 18.6121 18.5194 17.9043 13.9827 17.9043Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 															<path fillRule="evenodd" clipRule="evenodd" d="M13.9794 14.0065C16.9406 14.0065 19.3406 11.6054 19.3406 8.64431C19.3406 5.6832 16.9406 3.2832 13.9794 3.2832C11.0183 3.2832 8.61722 5.6832 8.61722 8.64431C8.60722 11.5954 10.9917 13.9965 13.9417 14.0065H13.9794Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -69,8 +69,8 @@ export default function AppointmentCTASection() {
 											</div>
 											<div className="xl:w-1/2 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Email" />
-													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
+													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-2sm max-sm:text-base text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Email" />
+													<span className="absolute text-2xl top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0">
 														<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M19.8888 8.32617L14.705 12.5414C13.7256 13.3184 12.3476 13.3184 11.3682 12.5414L6.14062 8.32617" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 															<path fillRule="evenodd" clipRule="evenodd" d="M18.7296 22.5C22.2779 22.5098 24.6693 19.5945 24.6693 16.0114V7.99835C24.6693 4.4153 22.2779 1.5 18.7296 1.5H7.2756C3.72736 1.5 1.33594 4.4153 1.33594 7.99835V16.0114C1.33594 19.5945 3.72736 22.5098 7.2756 22.5H18.7296Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -80,8 +80,8 @@ export default function AppointmentCTASection() {
 											</div>
 											<div className="xl:w-1/3 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dzNumber" value={ formData.dzNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Phone Number" />
-													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
+													<input name="dzNumber" value={ formData.dzNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-2sm max-sm:text-base text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Phone Number" />
+													<span className="absolute text-2xl top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0">
 														<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M15.7422 0.916992C20.06 1.39649 23.4714 4.80316 23.9555 9.12099" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 															<path d="M15.7422 5.0498C17.8084 5.45114 19.423 7.06697 19.8255 9.13314" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -93,8 +93,8 @@ export default function AppointmentCTASection() {
 
 											<div className="xl:w-1/3 sm:w-1/2 w-full  wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dateTime" value={ formData.dateTime } onChange={ handleChange } required type="date" className="py-3.75 ps-10 text-2sm text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Date" />
-													<span className="absolute text-2xl top-4 ltr:left-0 rtl:right-0">
+													<input name="dateTime" value={ formData.dateTime } onChange={ handleChange } required type="date" className="py-3.75 ps-10 text-2sm max-sm:text-base text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Date" />
+													<span className="absolute text-2xl top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0">
 														<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M3.60938 11.9608H24.404" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 															<path d="M19.1834 16.5174H19.1942" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
