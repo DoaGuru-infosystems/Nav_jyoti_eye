@@ -64,7 +64,7 @@ export default function AppointmentPage() {
         <div className="container">
           <div className="row items-end justify-between">
             <div className="xl:w-5/12 w-full mb-7.5">
-              <div className="relative rounded-2xl 2xl:p-13.75 sm:p-10 p-6.25 bg-[#006562] before:w-36.25 before:aspect-square before:absolute ltr:before:right-5 rtl:before:left-5 before:top-5 before:z-0 before:bg-size-[100%] before:bg-no-repeat before:bg-commentsvg">
+              <div className="relative rounded-2xl 2xl:p-13.75 sm:p-10 p-6.25 max-sm:p-4 bg-[#006562] before:w-36.25 before:aspect-square before:absolute ltr:before:right-5 rtl:before:left-5 before:top-5 before:z-0 before:bg-size-[100%] before:bg-no-repeat before:bg-commentsvg">
                 <div>
                   <h2 className="sm:text-2xxl text-2xl text-white sm:mb-5 mb-3.75">Book Your Appointment</h2>
                 </div>
@@ -75,31 +75,31 @@ export default function AppointmentPage() {
                   <div className="row">
                     <div className="w-full mb-7.5">
                       <div className="relative">
-                        <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-user"></i></span>
-                        <input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Name" />
+                        <span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-user"></i></span>
+                        <input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Name" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">
                       <div className="relative">
-                        <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
-                        <input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Email" />
+                        <span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
+                        <input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Email" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">
                       <div className="relative">
-                        <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-phone"></i></span>
-                        <input name="dzPhoneNumber" value={ formData.dzPhoneNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Phone Number" />
+                        <span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-phone"></i></span>
+                        <input name="dzPhoneNumber" value={ formData.dzPhoneNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Phone Number" />
                       </div>
                     </div>
                     <div className="sm:w-1/2 w-full mb-7.5">
                       <div className="relative">
-                        <span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-calendar"></i></span>
-                        <input name="dzDate" value={ formData.dzDate } onChange={ handleChange } required type="date" className="py-3.75 ps-10 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Date" />
+                        <span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-calendar"></i></span>
+                        <input name="dzDate" value={ formData.dzDate } onChange={ handleChange } required type="date" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Date" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">
                       <div className="relative">
-                        <textarea name="dzProblem" value={ formData.dzProblem } onChange={ handleChange } rows="4" className="py-3.75 ps-4 text-lg text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Describe your problem (optional)"></textarea>
+                        <textarea name="dzProblem" value={ formData.dzProblem } onChange={ handleChange } rows="4" className="py-3.75 ps-4 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Describe your problem (optional)"></textarea>
                       </div>
                     </div>
                     <div className="w-full mt-2.5">

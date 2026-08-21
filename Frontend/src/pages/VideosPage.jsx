@@ -30,10 +30,10 @@ export default function VideosPage() {
                                     data-src={video.videoUrl}
                                 >
                                     <div className="relative">
-                                        <img src={video.thumbnail || fallbackThumbnails[index % fallbackThumbnails.length]} alt={video.title} className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500" />
+                                        <img src={video.thumbnail || fallbackThumbnails[index % fallbackThumbnails.length]} alt={video.title} className="w-full max-w-full h-64 max-sm:h-auto object-cover transform group-hover:scale-110 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                            <div className="size-16 rounded-full bg-white/90 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-lg">
-                                                <i className="fas fa-play text-xl ms-1"></i>
+                                            <div className="size-16 max-sm:size-12 rounded-full bg-white/90 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-lg">
+                                                <i className="fas fa-play text-xl max-sm:text-lg ms-1"></i>
                                             </div>
                                         </div>
                                         <div className="absolute bottom-3 right-3 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">
@@ -41,7 +41,7 @@ export default function VideosPage() {
                                         </div>
                                     </div>
                                     <div className="p-5 bg-white border border-t-0 border-gray-100 rounded-b-2xl">
-                                        <h4 className="text-xl mb-0 font-semibold group-hover:text-primary transition-colors">{video.title}</h4>
+                                        <h4 className="text-xl max-sm:text-lg mb-0 font-semibold group-hover:text-primary transition-colors">{video.title}</h4>
                                     </div>
                                 </a>
                             </div>

@@ -52,8 +52,8 @@ export default function ContactPage() {
 				<div className="container">
 					<div className="row box-hover-wrapper">
 						<div className="lg:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
-							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover active">
-								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary">
+							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover active max-sm:text-center">
+								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary max-sm:mx-auto">
 									<span className="text-white">
 										<i className="feather icon-map-pin"></i>
 									</span>
@@ -65,8 +65,8 @@ export default function ContactPage() {
 							</div>
 						</div>
 						<div className="lg:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover">
-								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary">
+							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover max-sm:text-center">
+								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary max-sm:mx-auto">
 									<span className="text-white">
 										<i className="feather icon-phone"></i>
 									</span>
@@ -81,8 +81,8 @@ export default function ContactPage() {
 							</div>
 						</div>
 						<div className="lg:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
-							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover">
-								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary">
+							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover max-sm:text-center">
+								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary max-sm:mx-auto">
 									<span className="text-white">
 										<i className="feather icon-mail"></i>
 									</span>
@@ -96,8 +96,8 @@ export default function ContactPage() {
 							</div>
 						</div>
 						<div className="lg:w-1/4 sm:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s">
-							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover">
-								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary">
+							<div className="rounded-xxl p-6.25 pt-0 relative mt-10 h-[calc(100%-40px)] duration-200 bg-white after:w-1.25 after:h-[calc(100%-50px)] after:absolute after:bg-primary ltr:after:right-0 rtl:after:left-0 after:top-1/2 after:-translate-y-1/2 after:rounded-2lg after:opacity-30 after:duration-200 [.box-hover.active]:after:opacity-100 box-hover max-sm:text-center">
+								<div className="size-20 rounded-full flex items-center justify-center text-[32px] text-white -translate-y-10 -mb-5 duration-200 bg-secondary [.box-hover.active_&amp;]:bg-primary max-sm:mx-auto">
 									<span className="text-white">
 										<i className="feather icon-clock"></i>
 									</span>
@@ -141,25 +141,25 @@ export default function ContactPage() {
 										<div className="row">
 											<div className="w-full mb-5">
 												<div className="relative">
-													<span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-user"></i></span>
-													<input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Your Name" />
+													<span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-user"></i></span>
+													<input name="dzName" value={ formData.dzName } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Your Name" />
 												</div>
 											</div>
 											<div className="w-full mb-5">
 												<div className="relative">
-													<span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
-													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Your Email Address" />
+													<span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
+													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Your Email Address" />
 												</div>
 											</div>
 											<div className="w-full mb-5">
 												<div className="relative">
-													<span className="absolute ltr:left-0 rtl:right-0 top-4 flex items-center justify-center text-2xl text-primary"><i className="feather icon-phone"></i></span>
-													<input name="dzPhoneNumber" value={ formData.dzPhoneNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Phone Number" />
+													<span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-phone"></i></span>
+													<input name="dzPhoneNumber" value={ formData.dzPhoneNumber } onChange={ handleChange } required type="text" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Phone Number" />
 												</div>
 											</div>
 											<div className="w-full mb-5">
 												<div className="floating-underline underline-1">
-													<textarea name="dzMessage" value={ formData.dzMessage } onChange={ handleChange } required className="py-3.75 text-lg text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" rows="5" placeholder="Write Message"></textarea>
+													<textarea name="dzMessage" value={ formData.dzMessage } onChange={ handleChange } required className="py-3.75 text-lg max-sm:text-base text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" rows="5" placeholder="Write Message"></textarea>
 												</div>
 											</div>
 											<div className="w-full mt-2.5">
