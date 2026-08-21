@@ -64,7 +64,7 @@ export default function AppointmentPage() {
         <div className="container">
           <div className="row items-end justify-between">
             <div className="xl:w-5/12 w-full mb-7.5">
-              <div className="relative rounded-2xl 2xl:p-13.75 sm:p-10 p-6.25 max-sm:p-4 bg-[#006562] before:w-36.25 before:aspect-square before:absolute ltr:before:right-5 rtl:before:left-5 before:top-5 before:z-0 before:bg-size-[100%] before:bg-no-repeat before:bg-commentsvg">
+              <div className="relative rounded-2xl 2xl:p-13.75 sm:p-10 p-6.25 max-sm:p-4 bg-blue-900 before:w-36.25 before:aspect-square before:absolute ltr:before:right-5 rtl:before:left-5 before:top-5 before:z-0 before:bg-size-[100%] before:bg-no-repeat before:bg-commentsvg">
                 <div>
                   <h2 className="sm:text-2xxl text-2xl text-white sm:mb-5 mb-3.75">Book Your Appointment</h2>
                 </div>
