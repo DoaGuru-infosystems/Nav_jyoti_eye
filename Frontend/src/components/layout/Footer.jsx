@@ -63,7 +63,7 @@ export default function Footer() {
 
                 {/* Social icons */}
                 <div className="dz-social-icon">
-                  <ul className="flex gap-2.5">
+                  <ul className="flex gap-1.5 sm:gap-2.5">
                     {socialLinks.map(social => (
                       <li key={social.label} className="inline-block">
                         <a
@@ -129,7 +129,7 @@ export default function Footer() {
           <div className="py-7.5 border-t border-white/30 text-base">
             <div className="row">
               <div className="lg:w-1/3 w-full lg:text-start text-center">
-                <p className="text-sm font-light text-white/80 mb-0">
+                <p className="text-sm max-sm:text-xs font-light text-white/80 mb-0">
                   © {new Date().getFullYear()} Nav Jyoti Eye Hospital. All Rights Reserved.
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function Footer() {
                 <Link to="/admin/login" className="w-10 h-10 inline-block opacity-0" aria-hidden="true" aria-label="Admin Login"></Link>
               </div>
               <div className="lg:w-1/3 w-full lg:text-end text-center max-lg:!mt-3.75">
-                <p className="text-sm font-light text-white/80 mb-0">
+                <p className="text-sm max-sm:text-xs font-light text-white/80 mb-0">
                   Designed and developed by <a href="https://doaguru.com/" target="_blank" rel="noreferrer" className="text-white hover:text-primary">DOAGuru InfoSystems</a>
                 </p>
               </div>

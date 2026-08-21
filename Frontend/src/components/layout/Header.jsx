@@ -118,13 +118,13 @@ export default function Header() {
           {/* ── Logo ── */}
           <div className="flex items-center align-middle xl:w-41.25 w-33.75 sm:h-20 h-15.25 xl:me-7.5 me-2 logo-dark">
             <Link to="/" className="table-cell align-middle">
-              <img src="/assets/images/logo.svg" alt="ClinicMaster logo" className="object-contain" />
+              <img src="/assets/images/logo.svg" alt="ClinicMaster logo" className="object-contain max-sm:max-h-10" />
             </Link>
           </div>
 
           {/* ── Mobile hamburger toggler ── */}
           <button
-            className="xmenu-toggler lg:hidden float-end sm:mt-4.5 sm:mb-4 sm:ms-7 my-2.5 ms-5 size-11 bg-secondary rounded-md relative cursor-pointer max-lg:order-1 max-md:ms-auto"
+            className="xmenu-toggler lg:hidden float-end sm:mt-4.5 sm:mb-4 sm:ms-7 my-2.5 ms-3 sm:ms-5 size-11 bg-secondary rounded-md relative cursor-pointer max-lg:order-1 max-md:ms-auto"
             type="button"
             aria-label="Open menu"
           >
@@ -137,7 +137,7 @@ export default function Header() {
           <div className="lg:hidden fixed top-0 left-0 bg-black size-full duration-300 z-999 opacity-0 visible pointer-events-none menu-close fade-overlay" />
 
           {/* ── Nav ── */}
-          <div className="flex lg:basis-auto lg:grow max-lg:flex-col justify-start max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 ltr:max-lg:-left-75 rtl:max-lg:-right-75 max-lg:z-9999 max-lg:bg-white max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
+          <div className="flex lg:basis-auto lg:grow max-lg:flex-col justify-start max-lg:fixed max-lg:h-screen max-lg:px-5 max-lg:top-0 ltr:max-lg:-left-75 rtl:max-lg:-right-75 max-lg:z-9999 max-lg:bg-white max-sm:w-64 max-lg:w-72 max-lg:overflow-auto max-lg:duration-700 header-nav custom-scroll">
             {/* Mobile logo inside nav drawer */}
             <div className="flex items-center relative z-9 py-6.25 lg:hidden w-33.75 h-15.25">
               <Link to="/" className="table-cell align-middle">
@@ -171,7 +171,7 @@ export default function Header() {
           </div>
 
           {/* ── Extra nav (phone + appointment CTA) ── */}
-          <div className="extra-nav flex items-center h-20 3xl:ps-7.5 ms-auto max-sm:w-full max-sm:bg-white max-sm:fixed max-sm:-bottom-20 ltr:max-sm:left-0 rtl:max-sm:right-0 max-sm:px-5 max-sm:shadow-3 max-sm:h-15 max-sm:duration-500">
+          <div className="extra-nav flex items-center h-20 3xl:ps-7.5 ms-auto max-sm:w-full max-sm:bg-white max-sm:fixed max-sm:-bottom-16 ltr:max-sm:left-0 rtl:max-sm:right-0 max-sm:px-3 sm:max-sm:px-5 max-sm:shadow-3 max-sm:h-14 sm:max-sm:h-15 max-sm:duration-500">
             <div className="flex items-center w-full">
               <ul className="lg:ms-5 sm:ms-3.75 flex items-center gap-11.25 w-full justify-between">
                 {/* Phone number — hidden below 2xxl */}
@@ -189,7 +189,7 @@ export default function Header() {
 
                 {/* Appointment CTA */}
                 <li className="inline-block max-xl:hidden max-sm:!block">
-                  <Link to="/appointment" className="btn btn-primary max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg">
+                  <Link to="/appointment" className="btn btn-primary max-sm:!text-xs max-sm:!py-2 max-sm:!px-3 max-md:!text-sm max-md:!py-2.5 max-md:!px-4.5 max-md:!rounded-2lg">
                     Appointment
                     <i className="feather icon-arrow-right ms-1.25 text-xl text-white" />
                   </Link>

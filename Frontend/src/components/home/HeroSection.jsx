@@ -18,10 +18,10 @@ export default function HeroSection() {
 										Appointment
 										<i className="feather icon-arrow-right ltr:ml-1.25 rtl:mr-1.25"></i>
 									</a>
-									<button data-type="youtube" data-src="https://www.youtube.com/embed/o8OgzQdA70c" className="flex relative z-1 items-center text-lg font-medium leading-[1.3] before:top-0 ltr:before:left-0 rtl:before:right-0 before:absolute before:size-12.5 before:rounded-2lg before:bg-transparent before:-z-1 before:duration-200 hover:before:bg-primary hover:before:w-full group mb-4">
+									<a href="/eye-care-videos" className="flex relative z-1 items-center text-lg font-medium leading-[1.3] before:top-0 ltr:before:left-0 rtl:before:right-0 before:absolute before:size-12.5 before:rounded-2lg before:bg-transparent before:-z-1 before:duration-200 hover:before:bg-primary hover:before:w-full group mb-4">
 										<i className="icon feather icon-play inline-block w-10 h-12.5 min-w-10 rounded-6xl !leading-12.5 align-center text-primary text-xl me-2.5 px-5 duration-200 group-hover:text-white"></i>
 										<span className="text-lg font-medium pe-7.5 text-secondary duration-200 group-hover:text-white">Watch Highlight</span>
-									</button>
+									</a>
 								</div>
 							</div>
 						</div>

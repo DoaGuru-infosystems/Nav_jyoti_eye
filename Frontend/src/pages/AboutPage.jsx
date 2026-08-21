@@ -103,7 +103,7 @@ export default function AboutPage() {
 								</div>
 								<p className="text-lg font-medium leading-[1.6] text-white">At Navjyoti Eye Hospital, we specialize in providing state-of-the-art ophthalmic care including advanced Cataract surgeries and Orbit & Oculoplasty treatments.</p>
 								<p className="text-lg font-light leading-[1.6] text-white">Our mission is to bring back the light into our patients' lives through meticulous care and precise surgical interventions. Because we believe, "Care your Eyes - You may not get them again".</p>
-								<p className="text-lg font-medium leading-[1.6] text-white mt-4">Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade is a Doctors - Eye Specialist business located in Jabalpur, Madhya Pradesh, India. The office is situated at 1637, Mastana Chowk Road, Ranjhi, Bengali Colony, Jabalpur – 482011. For more details, visit: https://navjyotieyecare.in/. The office opens at 10 AM on working days. If you are looking for doctors - eye specialist in Jabalpur, you can get in touch with Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade using the contact details mentioned on this page.</p>
+							
 							</div>
 						</div>
 						<div className="lg:w-5/12 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">

@@ -18,7 +18,7 @@ export default function HomePage() {
 				<AppointmentCTASection />
 
 				<FaqSection />
-				<EyeDonationPledgeSection />
+				{/* <EyeDonationPledgeSection /> */}
 				<WhyChooseUsSection />
 				<TestimonialSection />
 			</div>
