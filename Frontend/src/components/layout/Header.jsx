@@ -119,7 +119,7 @@ export default function Header() {
           {/* ── Logo ── */ }
           <div className="flex items-center align-middle xl:w-60 w-54 sm:h-34 h-20 xl:me-7.5 me-2 logo-dark">
             <Link to="/" className="table-cell align-middle">
-              <img src="/assets/images/navjyoti-logo.png" alt="ClinicMaster logo" className="object-contain h-full w-full max-sm:max-h-26" />
+              <img src="/assets/images/navjyoti-logo.png" alt="ClinicMaster logo" className="object-contain h-full w-full max-sm:max-h-26 logo-dark-blue" />
             </Link>
           </div>
 
@@ -143,7 +143,7 @@ export default function Header() {
             {/* Mobile logo inside nav drawer */ }
             <div className="flex items-center relative z-9 py-6.25 lg:hidden w-48 h-20">
               <Link to="/" className="table-cell align-middle">
-                <img src="/assets/images/navjyoti-logo.png" alt="ClinicMaster" className="object-contain duration-500 h-full w-full" />
+                <img src="/assets/images/navjyoti-logo.png" alt="ClinicMaster" className="object-contain duration-500 h-full w-full logo-dark-blue" />
               </Link>
             </div>
 

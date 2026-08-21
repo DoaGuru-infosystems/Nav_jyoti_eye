@@ -3,14 +3,19 @@ import { getAppointments } from '../../api';
 
 const AppointmentsPage = () => {
     const [appointments, setAppointments] = useState([]);
+    const [page, setPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
+    const [totalAppointments, setTotalAppointments] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getAppointments();
-            setAppointments(Array.isArray(data) ? data.reverse() : []);
+            const result = await getAppointments(page, 5);
+            setAppointments(Array.isArray(result.data) ? result.data : []);
+            setTotalPages(result.totalPages || 1);
+            setTotalAppointments(result.total || 0);
         };
         fetchData();
-    }, []);
+    }, [page]);
 
     return (
         <div className="bg-gray-50 min-h-full">
@@ -26,7 +31,7 @@ const AppointmentsPage = () => {
                     </div>
                     <div>
                         <p className="text-xs text-gray-500 font-medium">Total Appointments</p>
-                        <p className="text-xl font-bold text-gray-800">{appointments.length}</p>
+                        <p className="text-xl font-bold text-gray-800">{totalAppointments}</p>
                     </div>
                 </div>
             </div>
@@ -138,6 +143,29 @@ const AppointmentsPage = () => {
                     ))
                 )}
             </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+                <div className="flex justify-between items-center mt-6 bg-white p-4 rounded-xl shadow-sm border border-gray-200">
+                    <button 
+                        onClick={() => setPage(p => Math.max(1, p - 1))}
+                        disabled={page === 1}
+                        className="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                        Previous
+                    </button>
+                    <span className="text-sm text-gray-600">
+                        Page <span className="font-semibold text-gray-900">{page}</span> of <span className="font-semibold text-gray-900">{totalPages}</span>
+                    </span>
+                    <button 
+                        onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                        disabled={page === totalPages}
+                        className="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                        Next
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

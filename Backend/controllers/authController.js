@@ -72,3 +72,38 @@ exports.loginAdmin = async (req, res) => {
         return res.status(500).json({ error: err.message || 'Server error during login' });
     }
 };
+
+exports.resetPassword = async (req, res) => {
+    const { identifier, newPassword } = req.body;
+
+    if (!identifier || !newPassword) {
+        return res.status(400).json({ error: 'Username/Email and new password are required' });
+    }
+
+    if (newPassword.length < 6) {
+        return res.status(400).json({ error: 'Password must be at least 6 characters long' });
+    }
+
+    try {
+        const [admins] = await db.query(
+            'SELECT * FROM admins WHERE username = ? OR email = ?',
+            [identifier, identifier]
+        );
+
+        if (admins.length === 0) {
+            return res.status(401).json({ error: 'Incorrect username or email' });
+        }
+
+        const admin = admins[0];
+
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+        await db.query('UPDATE admins SET password = ? WHERE id = ?', [hashedPassword, admin.id]);
+
+        return res.status(200).json({ success: true, message: 'Password reset successfully' });
+    } catch (err) {
+        console.error('Reset password error:', err);
+        return res.status(500).json({ error: 'Server error during password reset' });
+    }
+};

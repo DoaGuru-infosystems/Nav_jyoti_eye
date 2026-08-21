@@ -16,16 +16,21 @@ export const loginAdmin = async (username, password) => {
     return response;
 };
 
+export const resetPassword = async (identifier, newPassword) => {
+    const response = await api.post(`/auth/reset-password`, { identifier, newPassword });
+    return response;
+};
+
 
 
 // --- Lead APIs ---
-export const getLeads = async () => {
+export const getLeads = async (page = 1, limit = 5) => {
     try {
-        const response = await api.get(`/leads`);
+        const response = await api.get(`/leads?page=${page}&limit=${limit}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching leads:', error);
-        return [];
+        return { data: [], totalPages: 1 };
     }
 };
 
@@ -38,13 +43,13 @@ export const saveLead = async (lead) => {
 };
 
 // --- Appointment APIs ---
-export const getAppointments = async () => {
+export const getAppointments = async (page = 1, limit = 5) => {
     try {
-        const response = await api.get(`/appointments`);
+        const response = await api.get(`/appointments?page=${page}&limit=${limit}`);
         return response.data;
     } catch (error) {
         console.error('Error fetching appointments:', error);
-        return [];
+        return { data: [], totalPages: 1 };
     }
 };
 

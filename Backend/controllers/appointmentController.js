@@ -6,7 +6,7 @@ exports.createAppointment = async (req, res) => {
     let { name, email, phone, appointment_date, problem, source } = req.body;
 
     // Validate
-    if (!name || !email || !phone || !appointment_date || !source) {
+    if (!name || !phone || !appointment_date || !source) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
     if (source !== 'home' && source !== 'appointment_page') {
@@ -14,8 +14,10 @@ exports.createAppointment = async (req, res) => {
     }
     
     // Basic regex checks
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) return res.status(400).json({ error: 'Invalid email format' });
+    if (email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) return res.status(400).json({ error: 'Invalid email format' });
+    }
     
     const phoneRegex = /^\d{10,15}$/;
     const strippedPhone = phone.replace(/\D/g, '');
@@ -34,7 +36,7 @@ exports.createAppointment = async (req, res) => {
     // }
     const [result] = await db.execute(
       'INSERT INTO appointments (name, email, phone, problem, appointment_date, source) VALUES (?, ?, ?, ?, ?, ?)',
-      [name, email, phone, problem || null, appointment_date, source]
+      [name, email || null, phone, problem || null, appointment_date, source]
     );
 
     // Send email async
@@ -49,8 +51,18 @@ exports.createAppointment = async (req, res) => {
 
 exports.getAppointments = async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT * FROM appointments ORDER BY created_at DESC');
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 5;
+    const offset = (page - 1) * limit;
+
+    const [rows] = await db.execute(
+      'SELECT * FROM appointments ORDER BY created_at DESC LIMIT ? OFFSET ?',
+      [limit, offset]
+    );
     
+    const [countResult] = await db.execute('SELECT COUNT(*) as total FROM appointments');
+    const total = countResult[0].total;
+
     // Explicitly map database records to separate DB schema from frontend response
     const mappedRows = rows.map(r => ({
       id: r.id,
@@ -63,7 +75,13 @@ exports.getAppointments = async (req, res) => {
       source: r.source
     }));
 
-    return res.json(mappedRows);
+    return res.json({
+      data: mappedRows,
+      total,
+      page,
+      limit,
+      totalPages: Math.ceil(total / limit)
+    });
   } catch (error) {
     console.error('Get appointments error:', error);
     return res.status(500).json({ error: 'Internal server error' });

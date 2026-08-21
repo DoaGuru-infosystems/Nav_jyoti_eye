@@ -120,7 +120,7 @@ export default function AboutPage() {
 							</div>
 						</div>
 						<div className="lg:w-1/2 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
-							<div className="2xxl:p-15 md:p-10 sm:p-7.5 p-6.25 rounded-2xl bg-white duration-200 shadow-7 box-hover [.box-hover.active]:bg-primary active">
+							<div className="2xxl:p-15 md:p-10 sm:p-7.5 p-6.25 rounded-2xl bg-white duration-200 shadow-7 box-hover [.box-hover.active]:bg-blue-900 active">
 								<h3 className="2xxl:text-4xxl md:text-3xxl sm:text-3xl text-2xl font-bold duration-200 [.box-hover.active_&]:text-white">Our Vision</h3>
 								<p className="mb-0 duration-200 [.box-hover.active_&]:text-white">To be recognized as a premier center of excellence in ophthalmology, continually advancing our medical practices and providing affordable, world-class eye treatments.</p>
 							</div>

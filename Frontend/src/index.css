@@ -31,3 +31,7 @@
   --font-family-base:  "Poppins", sans-serif;
   --font-family-title: "Poppins", sans-serif;
 }
+
+@utility logo-dark-blue {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(3015%) hue-rotate(209deg) brightness(94%) contrast(98%);
+}

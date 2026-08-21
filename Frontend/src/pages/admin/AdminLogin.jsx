@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { setAdminAuth } from '../../components/admin/utils/auth';
 import { loginAdmin } from '../../api';
 
@@ -77,6 +77,14 @@ const AdminLogin = () => {
                         Login
                     </button>
                 </form>
+                <div className="mt-4 text-center">
+                    <Link
+                        to="/admin/forgot-password"
+                        className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+                    >
+                        Forgot Password?
+                    </Link>
+                </div>
                 {/* <div className="mt-4 text-center text-sm text-gray-500 bg-gray-50 p-3 rounded">
                     <p className="mb-1"><strong>Demo Credentials:</strong></p>
                     <p>Username: <code className="bg-gray-200 px-1 py-0.5 rounded text-gray-700">admin</code></p>

@@ -148,7 +148,7 @@ export default function ContactPage() {
 											<div className="w-full mb-5">
 												<div className="relative">
 													<span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
-													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Your Email Address" />
+													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } type="email" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-bodycolor border-b border-secondary/60 w-full placeholder:text-bodycolor" placeholder="Your Email Address (Optional)" />
 												</div>
 											</div>
 											<div className="w-full mb-5">

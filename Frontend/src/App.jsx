@@ -17,6 +17,7 @@ const Error404Page = React.lazy(() => import('./pages/Error404Page'));
 const AdminLayout = React.lazy(() => import('./components/admin/AdminLayout'));
 import RequireAuth from './components/admin/RequireAuth';
 const AdminLogin = React.lazy(() => import('./pages/admin/AdminLogin'));
+const ForgotPasswordPage = React.lazy(() => import('./pages/admin/ForgotPasswordPage'));
 const ContactLeadsPage = React.lazy(() => import('./pages/admin/ContactLeadsPage'));
 const AppointmentsPage = React.lazy(() => import('./pages/admin/AppointmentsPage'));
 
@@ -41,6 +42,7 @@ export default function App() {
 
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/forgot-password" element={<ForgotPasswordPage />} />
           <Route path="/admin" element={
             <RequireAuth>
               <AdminLayout />

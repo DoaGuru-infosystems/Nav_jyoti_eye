@@ -82,7 +82,7 @@ export default function AppointmentPage() {
                     <div className="w-full mb-7.5">
                       <div className="relative">
                         <span className="absolute ltr:left-0 rtl:right-0 top-1/2 -translate-y-1/2 flex items-center justify-center text-2xl text-primary"><i className="feather icon-mail"></i></span>
-                        <input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Email" />
+                        <input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } type="email" className="py-3.75 ps-10 text-lg max-sm:text-base text-start text-white border-b border-white/80 w-full bg-transparent focus:outline-none" placeholder="Your Email (Optional)" />
                       </div>
                     </div>
                     <div className="w-full mb-7.5">

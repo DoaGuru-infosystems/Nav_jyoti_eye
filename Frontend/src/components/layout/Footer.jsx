@@ -51,7 +51,7 @@ export default function Footer() {
               <div className="me-2 max-lg:text-center max-lg:mx-auto">
                 <div className="mb-4">
                   <Link to="/" className="inline-block bg-white p-1.5 rounded-lg mb-4">
-                    <img src="/assets/images/navjyoti-logo.png" alt={siteData.branding.name} className="w-[260px] sm:w-[320px] max-w-full" />
+                    <img src="/assets/images/navjyoti-logo.png" alt={siteData.branding.name} className="w-[260px] sm:w-[320px] max-w-full logo-dark-blue" />
                   </Link>
                   <h3 className="text-white text-2xl sm:text-3xl font-bold mb-2">Nav Jyoti Eye Hospital</h3>
                 </div>

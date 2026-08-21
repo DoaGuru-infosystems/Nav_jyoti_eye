@@ -8,4 +8,7 @@ router.post('/register', authController.registerAdmin);
 // Login Admin API
 router.post('/login', authController.loginAdmin);
 
+// Reset Password API (Forgot Password)
+router.post('/reset-password', authController.resetPassword);
+
 module.exports = router;

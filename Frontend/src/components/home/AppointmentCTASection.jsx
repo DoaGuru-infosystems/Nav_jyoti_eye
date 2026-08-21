@@ -69,7 +69,7 @@ export default function AppointmentCTASection() {
 											</div>
 											<div className="xl:w-1/2 sm:w-1/2 w-full wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 												<div className="relative">
-													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } required type="email" className="py-3.75 ps-10 text-2sm max-sm:text-base text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Email" />
+													<input name="dzEmail" value={ formData.dzEmail } onChange={ handleChange } type="email" className="py-3.75 ps-10 text-2sm max-sm:text-base text-start text-white border-b-2 border-white min-h-15 w-full bg-transparent focus:outline-none placeholder:text-white" placeholder="Your Email (Optional)" />
 													<span className="absolute text-2xl top-1/2 -translate-y-1/2 ltr:left-0 rtl:right-0">
 														<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path d="M19.8888 8.32617L14.705 12.5414C13.7256 13.3184 12.3476 13.3184 11.3682 12.5414L6.14062 8.32617" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

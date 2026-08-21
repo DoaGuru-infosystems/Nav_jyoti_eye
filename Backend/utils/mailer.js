@@ -56,7 +56,7 @@ const sendAppointmentNotification = (data) => {
   const html = `
     <h2>New Appointment Booking</h2>
     <p><strong>Name:</strong> ${data.name}</p>
-    <p><strong>Email:</strong> ${data.email}</p>
+    <p><strong>Email:</strong> ${data.email || 'N/A'}</p>
     <p><strong>Phone:</strong> ${data.phone}</p>
     <p><strong>Appointment Date:</strong> ${data.appointment_date}</p>
     <p><strong>Source:</strong> ${data.source}</p>
@@ -69,7 +69,7 @@ const sendLeadNotification = (data) => {
   const html = `
     <h2>New Contact Lead</h2>
     <p><strong>Name:</strong> ${data.name}</p>
-    <p><strong>Email:</strong> ${data.email}</p>
+    <p><strong>Email:</strong> ${data.email || 'N/A'}</p>
     <p><strong>Phone:</strong> ${data.phone || 'N/A'}</p>
     ${data.message ? `<p><strong>Message:</strong> ${data.message}</p>` : ''}
   `;
