@@ -12,6 +12,7 @@ const VideosPage = React.lazy(() => import('./pages/VideosPage'));
 const HospitalsPage = React.lazy(() => import('./pages/HospitalsPage'));
 const LegalPage = React.lazy(() => import('./pages/LegalPage'));
 const Error404Page = React.lazy(() => import('./pages/Error404Page'));
+const TreatmentsPage = React.lazy(() => import('./pages/TreatmentsPage'));
 
 // Admin Pages (Lazy loaded)
 const AdminLayout = React.lazy(() => import('./components/admin/AdminLayout'));
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="/about-us" element={<AboutPage />} />
             <Route path="/contact-us" element={<ContactPage />} />
             <Route path="/appointment" element={<AppointmentPage />} />
+            <Route path="/our-services" element={<TreatmentsPage />} />
             <Route path="/treatments/:slug" element={<TreatmentDetail />} />
             <Route path="/eye-care-videos" element={<VideosPage />} />
             <Route path="/hospitals" element={<HospitalsPage />} />

@@ -8,7 +8,7 @@ export const siteData = {
     logoAlt: "Navjyoti Eye Hospital logo",
     tagline: "WE CARE FOR YOU",
     slogan: "Care your Eyes - You may not get them again",
-    nameHindi: "नवज्योति आई हॉस्पिटल",
+    // nameHindi: "à¤¨à¤µà¤œà¥à¤¯à¥‹à¤¤à¤¿ à¤†à¤ˆ à¤¹à¥‰à¤¸à¥à¤ªà¤¿à¤Ÿà¤²",
   },
 
   // Contact Information
@@ -23,7 +23,7 @@ export const siteData = {
   // Working Hours
   workingHours: [
     { day: "Mon-Sat", hours: "11:00 AM - 8:30 PM" },
-    { day: "Sun", hours: "Closed / रविवार अवकाश" },
+    { day: "Sun", hours: "Closed / à¤°à¤µà¤¿à¤µà¤¾à¤° à¤…à¤µà¤•à¤¾à¤¶" },
   ],
 
   // Social Links
@@ -48,7 +48,15 @@ export const siteData = {
       shortDesc:
         "Restore crystal-clear vision with our advanced Phacoemulsification (Phaco) technique. This state-of-the-art, minimally invasive cataract surgery ensures a rapid recovery, minimal discomfort, and highly precise results. We utilize premium intraocular lenses (IOLs) tailored to your visual needs, allowing you to return to your daily activities with enhanced clarity.",
       path: "/treatments/cataract-surgery",
-      // image: "/assets/images/services/img2.webp"
+      tags: ["Phacoemulsification", "Premium IOL", "Painless", "Fast Recovery"],
+      highlights: [
+        "Minimally Invasive Phaco Surgery",
+        "Premium Monofocal & Multifocal IOL Options",
+        "No Stitch, No Injection Technique",
+        "Same-Day Discharge in Most Cases",
+        "High-Definition Post-Op Vision",
+        "Comprehensive Pre & Post-Op Care",
+      ],
     },
     {
       id: "oculoplasty",
@@ -56,7 +64,15 @@ export const siteData = {
       shortDesc:
         "Our specialized Orbit & Oculoplasty services address both cosmetic and reconstructive needs of the eyes, eyelids, tear ducts, and surrounding facial structures. Whether treating droopy eyelids (ptosis), orbital tumors, or trauma reconstruction, our expert surgical interventions restore both optimal function and aesthetic appearance with utmost precision.",
       path: "/treatments/oculoplasty",
-      // image: "/assets/images/services/img3.webp"
+      tags: ["Ptosis Repair", "Eyelid Surgery", "Tear Ducts", "Orbital Tumors"],
+      highlights: [
+        "Droopy Eyelid (Ptosis) Correction",
+        "Cosmetic Blepharoplasty",
+        "Orbital Tumor Removal",
+        "Tear Duct (DCR) Surgery",
+        "Eyelid Reconstruction After Trauma",
+        "Botox & Filler Treatments",
+      ],
     },
     {
       id: "comprehensive-exams",
@@ -64,7 +80,15 @@ export const siteData = {
       shortDesc:
         "Prevention and early detection are key to lifelong eye health. Our comprehensive evaluations go beyond standard vision tests to thoroughly assess the anterior and posterior segments of your eye. We meticulously examine the eyelids, cornea, fundus, and retina using advanced diagnostic imaging to detect conditions like glaucoma, macular degeneration, and diabetic retinopathy early.",
       path: "/treatments/comprehensive-exams",
-      // image: "/assets/images/services/img4.webp"
+      tags: ["Slit Lamp", "Fundus Exam", "OCT Scan", "Tonometry"],
+      highlights: [
+        "Anterior & Posterior Segment Evaluation",
+        "Digital Fundus Photography",
+        "OCT (Optical Coherence Tomography) Scan",
+        "Intraocular Pressure (IOP) Check",
+        "Corneal Topography Mapping",
+        "Early Detection of Retinal Diseases",
+      ],
     },
     {
       id: "refraction-testing",
@@ -72,7 +96,103 @@ export const siteData = {
       shortDesc:
         "Achieve your perfect visual acuity with our exhaustive refraction testing. We perform detailed Dry and Wet (Cycloplegic) Retinoscopy to accurately determine your exact prescription by relaxing the eye muscles. This ensures the most precise measurements for eyeglasses or contact lenses, specifically crucial for pediatric patients and those with complex refractive errors.",
       path: "/treatments/refraction-testing",
+      icon: "flaticon-glasses",
+      tags: [
+        "Dry Retinoscopy",
+        "Wet Retinoscopy",
+        "Cycloplegic",
+        "Prescription",
+      ],
+      highlights: [
+        "Dry & Wet Retinoscopy",
+        "Cycloplegic Refraction for Children",
+        "Complex Refractive Error Management",
+        "Precise Spectacle & Contact Lens Prescription",
+      ],
       // image: "/assets/images/services/img5.webp"
+    },
+    {
+      id: "glaucoma-treatment",
+      title: "Glaucoma Treatment & Management",
+      shortDesc:
+        "Glaucoma is a silent thief of sight — often causing irreversible damage before symptoms appear. At Nav Jyoti Eye Hospital, we offer early detection and comprehensive management of all types of glaucoma using advanced tonometry, OCT imaging, and visual field analysis. Our personalised treatment plans — including medicated eye drops, laser therapy (SLT/LTP), and surgical interventions — aim to halt disease progression and preserve your precious vision for life.",
+      path: "/treatments/glaucoma-treatment",
+      icon: "flaticon-eye-1",
+      tags: ["IOP Control", "Laser SLT", "OCT Imaging", "Visual Field"],
+      highlights: [
+        "Advanced Intraocular Pressure (IOP) Monitoring",
+        "Selective Laser Trabeculoplasty (SLT)",
+        "Surgical Trabeculectomy",
+        "OCT-based Optic Nerve Analysis",
+        "Customised Medication Plans",
+        "Regular Progression Monitoring",
+      ],
+    },
+    {
+      id: "retina-surgery",
+      title: "Retina Surgery & Vitreoretinal Care",
+      shortDesc:
+        "The retina is the light-sensitive layer at the back of your eye — your window to the world. Our specialised vitreoretinal services cover the complete spectrum of retinal conditions including Retinal Detachment Repair, Macular Hole Surgery, Diabetic Retinopathy management, and Anti-VEGF injections for wet AMD. Using cutting-edge vitrectomy technology and laser photocoagulation, our surgeons work with exceptional precision to restore and protect your central vision.",
+      path: "/treatments/retina-surgery",
+      icon: "flaticon-eye",
+      tags: [
+        "Vitrectomy",
+        "Laser Photocoagulation",
+        "Anti-VEGF",
+        "Diabetic Retina",
+      ],
+      highlights: [
+        "Retinal Detachment Repair",
+        "Diabetic Retinopathy Laser Treatment",
+        "Anti-VEGF Injections (Lucentis / Avastin)",
+        "Macular Hole & Membrane Surgery",
+        "Vitreous Haemorrhage Management",
+        "Fundus Fluorescein Angiography (FFA)",
+      ],
+    },
+    {
+      id: "ocular-oncology",
+      title: "Ocular Oncology (Eye Cancer Surgery)",
+      shortDesc:
+        "We provide advanced surgical care for eye cancers, including tumors of the eyelid, conjunctiva, intraocular structures, and orbit. Our specialized ocular oncology treatments aim to completely remove cancerous tissue while preserving as much vision and eye function as possible, ensuring the best outcomes for our patients.",
+      path: "/treatments/ocular-oncology",
+      icon: "flaticon-medical",
+      tags: [
+        "Eye Cancer",
+        "Tumor Removal",
+        "Oncology",
+        "Biopsy",
+      ],
+      highlights: [
+        "Eyelid and Conjunctival Tumor Excision",
+        "Intraocular Tumor Management",
+        "Orbital Tumor Surgery",
+        "Advanced Reconstruction Techniques",
+        "Collaborative Care with Oncologists",
+        "Preservation of Vision and Aesthetics",
+      ],
+    },
+    {
+      id: "eyelid-surgery",
+      title: "Eyelid Surgery (Blepharoplasty & Repair)",
+      shortDesc:
+        "Our specialized eyelid surgery services address both functional and cosmetic concerns. Whether it is removing excess skin that impairs vision (blepharoplasty), correcting drooping eyelids (ptosis), or repairing damage from trauma, our expert surgeons ensure optimal results that enhance both your sight and appearance.",
+      path: "/treatments/eyelid-surgery",
+      icon: "flaticon-eye-2",
+      tags: [
+        "Blepharoplasty",
+        "Ptosis Repair",
+        "Eyelid Repair",
+        "Cosmetic",
+      ],
+      highlights: [
+        "Cosmetic & Functional Blepharoplasty",
+        "Ptosis (Drooping Eyelid) Correction",
+        "Ectropion & Entropion Repair",
+        "Eyelid Reconstruction after Trauma",
+        "Minimally Invasive Techniques",
+        "Natural-looking Results",
+      ],
     },
   ],
 
@@ -84,7 +204,8 @@ export const siteData = {
       role: "Lead Doctor & Surgeon",
       qualifications: "MBBS, MS, FICO (Chitrakoot)",
       specialization: "Phaco, Orbit & Oculoplasty Surgeon",
-      specializationHindi: "चित्रकूट के पूर्व वरिष्ठ नेत्र सर्जन",
+      specializationHindi:
+        "चित्रकूट के पूर्व वरिष्ठ नेत्र सर्जन",
       experience: [
         "Ex-consultant, Shankracharya Netralay, Jhoteshwar",
         "Ex-consultant, SNC Chitrakoot",
@@ -97,94 +218,38 @@ export const siteData = {
   ],
 
   // Testimonials
-  testimonials: [
-    {
-      id: "test-1",
-      name: "Vipul Sharma",
-      title: "Patient",
-      text: "Nav Jyoti Eye care is going to be a big benefit for the residents of Ranjhi, Khamaria, VFJ and adjoining areas. The clinic is well equipped with latest machineries. Dr. Warkade is highly experienced doctor and his team including optometrist Mr. Ajay and others are qualified and skilled. They are also well behaved and gentle. I recommend everyone for any type eye problems.",
-      rating: 5,
-    },
-    {
-      id: "test-2",
-      name: "Preeti Chaturvedi",
-      title: "Patient",
-      text: "Swabhavata is very polite. He patiently listens to patients' concerns and resolves them. The clinic is located on a flat surface, so elderly patients will have no trouble seeing him.",
-      rating: 5,
-    },
-    {
-      id: "test-3",
-      name: "lakshman Singh dhurve",
-      title: "Patient",
-      text: "Excellent work nd best hospital for eye and staff behaviour was too kind and good",
-      rating: 5,
-    },
-    {
-      id: "test-4",
-      name: "Sangeeta Warkade",
-      title: "Patient",
-      text: "The hospital is very nice and the behaviour of staff is also nice and Dr. Rukmendra sir is also very sweet and they also take care of hygiene as well 😊",
-      rating: 5,
-    },
-    {
-      id: "test-5",
-      name: "Abhilasha Pardhan",
-      title: "Patient",
-      text: "Very good and satisfactory experience,,,,Dr and staff behaviour well and Drs treatment is very well about eye care thanku so much sir and all staff,,,,,,,,",
-      rating: 5,
-    },
-    {
-      id: "test-6",
-      name: "Rajni Choudhary",
-      title: "Patient",
-      text: "Best Hospital & Good behaviour all staff of Navjyoti eye care",
-      rating: 5,
-    },
-    {
-      id: "test-7",
-      name: "saurav banerjee",
-      title: "Patient",
-      text: "Experienced with more than 3000 opthalmic operations have wonderful results to make clear visions...",
-      rating: 5,
-    },
-    {
-      id: "test-8",
-      name: "Pradeep Kumar Kachhi",
-      title: "Patient",
-      text: "Very good treatment for eye 👁️",
-      rating: 5,
-    },
-  ],
 
   // FAQs
   faqs: [
     {
       id: "faq-1",
-      question:
-        "Where is Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade located?",
+      question: "Where is Nav Jyoti Eye Hospital ",
       answer:
-        "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade is located at 1637, Mastana Chowk Road, Ranjhi, Bengali Colony, Jabalpur - 482011, Madhya Pradesh, India.",
+        "Nav Jyoti Eye Hospital  is located at 1637, Mastana Chowk Road, Ranjhi, Bengali Colony, Jabalpur - 482011, Madhya Pradesh, India.",
     },
     {
       id: "faq-2",
-      question:
-        "What are the working hours of Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade?",
+      question: "What are the working hours of Nav Jyoti Eye Hospital",
       answer:
-        "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade opens at 10 AM on working days. Please confirm closing time directly.",
+        "Nav Jyoti Eye Hospital Dr Rukmendra Pratap Singh Warkade opens at 10 AM on working days. Please confirm closing time directly.",
     },
     {
       id: "faq-3",
-      question:
-        "What payment methods does Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade accept?",
+      question: "What payment methods does Nav Jyoti Eye Hospital accept?",
       answer:
-        "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade accepts cash. Please confirm other payment options directly.",
+        "Nav Jyoti Eye Hospital accepts cash as well as CGHS (Central Government Health Scheme) card and Ayushman Bharat card for eligible treatments. Please contact us to confirm your eligibility and coverage details.",
     },
     {
       id: "faq-4",
-      question:
-        "Is Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade open on Sunday?",
+      question: "Is Nav Jyoti Eye Hospital open on Sunday?",
       answer:
-        "Navjyoti Eye Care Dr Rukmendra Pratap Singh Warkade is listed as open on working days from 10 AM. Please call to confirm Sunday availability.",
+        "Nav Jyoti Eye Hospital is open on working days from 10 AM to 8:30 PM. Sunday is generally a holiday. Please call us to confirm Sunday availability.",
+    },
+    {
+      id: "faq-5",
+      question: "Do you perform Ocular Oncology or Eye Cancer Surgeries?",
+      answer:
+        "Yes, we provide specialized Ocular Oncology services. Our experienced surgeons perform comprehensive surgeries for various eye cancers, including tumors of the eyelid, conjunctiva, orbit, and intraocular structures. We focus on completely removing the tumor while maximizing the preservation of vision and the eye's natural appearance.",
     },
   ],
 
@@ -217,7 +282,7 @@ export const siteData = {
       id: "hospital-1",
       name: "Navjyoti Eye Hospital",
       address:
-        "Opposite Pal Hospital, Mastana Chowk, Ranjhi, Jabalpur (M.P.) — (पाल अस्पताल के सामने, मस्ताना चौक, राँझी, जबलपुर)",
+        "Opposite Pal Hospital, Mastana Chowk, Ranjhi, Jabalpur (M.P.) — (पाल अस्पताल के सामने, मस्ताना चौक, रांझी, जबलपुर)",
       phone: "+91 6268875304",
       email: "info@navjyotieyehospital.com",
       image: hospitaImage,

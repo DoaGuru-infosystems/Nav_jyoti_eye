@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
 import { siteData } from '../../data/siteData';
 import serviceImg from '../../assets/images/home/ServicesSection-1.png';
 
 export default function ServicesSection() {
+	// Show only first 4 services on home page
+	const displayedTreatments = siteData.treatments.slice(0, 4);
+
 	return (
 		<section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5 overflow-hidden">
 			<div className="container">
@@ -16,7 +20,7 @@ export default function ServicesSection() {
 					<div className="xl:w-2/3 lg:w-3/5 w-full xl:pl-10">
 						<div className="row relative z-1 wow fadeInUp " data-wow-delay="0.8s">
 							<div className="w-full">
-								{ siteData.treatments.map((treatment, index) => (
+								{ displayedTreatments.map((treatment, index) => (
 									<div key={ treatment.id } className={ `relative z-1 pb-2.5 border-b border-primary/10 ${index === 0 ? 'border-t' : ''} group image-tooltip-effect` } data-url={ `images/services/img${index + 2}.webp` }>
 										<div className="flex items-start md:items-center gap-5 relative z-1 md:py-10 md:px-7.5 p-5 h-full bg-white duration-200 rounded-2xl mt-2.5 group-hover:bg-light max-md:flex-col cursor-default">
 											<span className="text-2xl min-w-10 font-bold font-title leading-none text-primarylight duration-200 group-hover:text-primary">
@@ -33,9 +37,18 @@ export default function ServicesSection() {
 								)) }
 							</div>
 						</div>
+
+						{/* View More Services Button */}
+						<div className="mt-7.5 wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.7s">
+							<Link to="/our-services" className="btn btn-primary inline-flex items-center gap-2">
+								View More Services
+								<i className="feather icon-arrow-right"></i>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
 }
+

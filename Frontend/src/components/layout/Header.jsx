@@ -12,23 +12,35 @@
  */
 
 import { useRef, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import useXMenu from '../../hooks/useXMenu';
 import navLinks from '../../data/navLinks';
 import { siteData } from '../../data/siteData';
 
+/* ── Helper: check if any child href matches current path ─────────────────── */
+function isAnyChildActive(children, pathname) {
+  if (!children) return false;
+  return children.some(child =>
+    child.href !== '#' && pathname.startsWith(child.href)
+  );
+}
+
 /* ── Recursive nav item renderer ────────────────────────────────────────── */
 function NavItem({ item, depth = 0 }) {
   const hasChildren = item.children?.length > 0;
+  const { pathname } = useLocation();
 
   if (depth === 0) {
+    // Check if any child's path matches current URL → highlight parent
+    const parentActive = hasChildren && isAnyChildActive(item.children, pathname);
+
     // Top-level item
     return (
       <li className="lg:inline-block block max-lg:border-b max-lg:border-gray-200 relative group">
         { hasChildren ? (
           <>
             <a
-              className="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary after:ms-1 after:-mt-1 after:inline-block after:size-3 after:bg-starsvg max-lg:after:hidden cursor-pointer"
+              className={ `lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary after:ms-1 after:-mt-1 after:inline-block after:size-3 after:bg-starsvg max-lg:after:hidden cursor-pointer${parentActive ? ' text-primary' : ''}` }
               href="#"
               onClick={ e => e.preventDefault() }
             >
@@ -76,12 +88,14 @@ function NavItem({ item, depth = 0 }) {
             </ul>
           </>
         ) : (
-          <Link
+          <NavLink
             to={ item.href }
-            className="block relative text-sm text-gray-600 font-normal py-1.25 lg:px-7.5 duration-500 hover:text-primary"
+            className={ ({ isActive }) =>
+              `block relative text-sm font-normal py-1.25 lg:px-7.5 duration-500 hover:text-primary${isActive ? ' text-primary font-semibold bg-primary/5' : ' text-gray-600'}`
+            }
           >
             <span>{ item.label }</span>
-          </Link>
+          </NavLink>
         ) }
       </li>
     );
@@ -90,12 +104,14 @@ function NavItem({ item, depth = 0 }) {
   // depth === 2 — grand-child leaf
   return (
     <li className="relative">
-      <Link
+      <NavLink
         to={ item.href }
-        className="block relative text-sm text-gray-600 font-normal py-1.25 lg:px-7.5 duration-500 hover:text-primary"
+        className={ ({ isActive }) =>
+          `block relative text-sm font-normal py-1.25 lg:px-7.5 duration-500 hover:text-primary${isActive ? ' text-primary font-semibold bg-primary/5' : ' text-gray-600'}`
+        }
       >
         <span>{ item.label }</span>
-      </Link>
+      </NavLink>
     </li>
   );
 }

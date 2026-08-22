@@ -6,13 +6,18 @@ import { siteData } from '../data/siteData';
 import bannerImg from '../assets/images/navjyoti/abootus-banner.png';
 import imgDoctor from '../assets/images/home/doctor.png';
 import weCareImg from '../assets/images/navjyoti/We-Care.png';
+import imgAbout1 from "../assets/images/home/about-1.png";
+import imgAbout2 from "../assets/images/home/about-2.png";
 
 export default function AboutPage() {
-	const aboutImg6 = ""; 
-	const aboutImg10 = ""; 
-	const aboutImg11 = ""; 
-	const aboutArchedImage = ""; 
-	const aboutBadgeImage = ""; 
+	const aboutImg6 = "";
+	const aboutImg10 = "";
+	const aboutImg11 = "";
+	const aboutArchedImage = "";
+	const aboutBadgeImage = "";
+
+	const archedImage = imgAbout1;
+	const badgeImage = imgAbout2;
 
 	const doctor = siteData.team[0];
 
@@ -32,7 +37,75 @@ export default function AboutPage() {
 				</div>
 			</div>
 
-			<AboutSection />
+			{/* <AboutSection /> */ }
+
+			{/* about us section  */ }
+			<section className="2xxl:pt-25 2xxl:pb-17.5 md:pt-17.5 md:pb-10 sm:pt-12.5 pt-10 pb-5 overflow-hidden bg-light" style={ { backgroundImage: 'url(/assets/images/background/bg7.webp)' } }>
+				<div className="container">
+					<div className="row content-wrapper style-42 mb-7.5 justify-center">
+						<div className="lg:w-1/2 w-full">
+							<div className="relative z-1 xl:pe-27.5 sm:pe-12.5 mb-7.5">
+								<div className="relative flex max-md:flex-col items-center">
+									<img src={ archedImage || "https://images.pexels.com/photos/6749781/pexels-photo-6749781.jpeg?auto=compress&cs=tinysrgb&w=550&h=530&fit=crop" } alt="" className="size-full rounded-t-[400px] object-cover" />
+									<img src={ badgeImage || "https://images.pexels.com/photos/8949024/pexels-photo-8949024.jpeg?auto=compress&cs=tinysrgb&w=170&h=170&fit=crop" } alt="" className="xl:size-42.5 w-37.5 h-45 border-[10px] border-white md:absolute md:bottom-0 ltr:md:-right-15 rtl:md:-left-15 max-md:relative max-md:-mt-10 shadow-22 rounded-3xl ltr:max-sm:left-0 rtl:max-sm:right-0 object-cover" />
+								</div>
+								<div className="absolute z-10 -top-10 max-sm:-top-6 ltr:sm:right-25 ltr:right-0 rtl:sm:left-25 rtl:left-0" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
+									<a href="#" onClick={ e => e.preventDefault() }>
+										<div className="flex items-center justify-center">
+											<span className="word-rotate-box light flex justify-center items-center xl:size-45 lg:size-37.5 size-30 max-sm:size-24 bg-transparent rounded-full text-center p-3.75 relative after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:-z-1 after:rounded-full after:border-[25px] max-sm:after:border-[15px] after:border-transparent after:backdrop-blur-[17px] after:bg-primary after:drop-shadow-[0px_0px_100px_rgba(0,0,0,0.15)]">
+												<span className="relative w-full h-full block animate-[spin_12s_linear_infinite] text-white">
+													{ "#1 AWARD WINNING EYE CARE CENTER   ".split("").map((char, i, arr) => (
+														<span
+															key={ i }
+															className="absolute left-1/2 top-0 origin-bottom xl:text-[13px] lg:text-[11px] text-[10px] font-semibold uppercase"
+															style={ {
+																height: '50%',
+																transform: `translateX(-50%) rotate(${i * (360 / arr.length)}deg)`,
+															} }
+														>
+															{ char }
+														</span>
+													)) }
+												</span>
+											</span>
+											<i className="icon feather icon-arrow-up-right block text-white xl:text-3xl lg:text-2xl text-xl absolute z-1"></i>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div className="lg:w-1/2 w-full">
+							<div className="sm:mb-7.5 mb-5 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">
+								<span className="text-primary font-medium sm:text-xl text-base leading-[1.2] font-sub-title rounded-3xl italic mb-2.5 block">About us</span>
+								<h2 className="2xxl:text-5xxl lg:text-[38px] sm:text-[32px] text-2xxl font-bold capitalize leading-[1.3]">We care more than just your eyes</h2>
+								<p className="text-lg font-normal text-secondary">Eye care center treatments are specialized services aimed at improving and maintaining eye health.</p>
+							</div>
+							<div className="row mb-2.5">
+								<div className="sm:w-1/3 w-1/2 max-[375px]:w-full wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.8s">
+									<div className="mb-7.5 text-center">
+										<span className="lg:text-6xl sm:text-3xxl text-3xl font-bold leading-[1.2] text-primary font-title"><span className="value" data-value="20">15</span>+</span>
+										<h3 className="lg:text-base sm:text-2sm text-sm font-normal font-base mb-0">Years of service</h3>
+									</div>
+								</div>
+								<div className="sm:w-1/3 w-1/2 max-[375px]:w-full wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.8s">
+									<div className="mb-7.5 text-center">
+										<span className="lg:text-6xl sm:text-3xxl text-3xl font-bold leading-[1.2] text-primary font-title"><span className="value" data-value="14">3000</span>+</span>
+										<h3 className="lg:text-base sm:text-2sm text-sm font-normal font-base mb-0 ">Surgurys</h3>
+									</div>
+								</div>
+								<div className="sm:w-1/3 w-1/2 max-[375px]:w-full wow fadeInRight" data-wow-delay="1.0s" data-wow-duration="0.8s">
+									<div className="mb-7.5 text-center">
+										<span className="lg:text-6xl sm:text-3xxl text-3xl font-bold leading-[1.2] text-primary font-title"><span className="value" data-value="28">5</span>+</span>
+										<h3 className="lg:text-base sm:text-2sm text-sm font-normal font-base mb-0">Services</h3>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
 
 			<section className="2xxl:pt-25 md:pt-17.5 sm:pt-12.5 pt-10 relative z-1 bg-white" style={ { backgroundImage: 'url(/assets/images/background/bg7.webp)' } }>
 				<div className="container">
@@ -41,21 +114,21 @@ export default function AboutPage() {
 							<div className="2xxl:mb-17.5 sm:mb-10">
 								<div className="sm:mb-7.5 mb-5">
 									<span className="text-primary font-medium sm:text-xl text-base leading-[1.2] font-sub-title rounded-3xl italic mb-2.5 block wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.8s">Lead Surgeon</span>
-									<h2 className="2xxl:text-5xxl lg:text-[38px] sm:text-[32px] text-2xxl font-bold capitalize leading-[1.3] wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">{doctor.name}</h2>
-									<p className="text-lg font-normal text-secondary wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s"><strong className="text-secondary fw-semibold">{doctor.name}</strong> is a highly experienced {doctor.specialization}. He is dedicated to providing advanced eye care services and holds prestigious qualifications including {doctor.qualifications}.</p>
+									<h2 className="2xxl:text-5xxl lg:text-[38px] sm:text-[32px] text-2xxl font-bold capitalize leading-[1.3] wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">{ doctor.name }</h2>
+									<p className="text-lg font-normal text-secondary wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s"><strong className="text-secondary fw-semibold">{ doctor.name }</strong> is a highly experienced { doctor.specialization }. He is dedicated to providing advanced eye care services and holds prestigious qualifications including { doctor.qualifications }.</p>
 								</div>
 								<h3 className="text-xl font-semibold pb-2.5 relative mb-3 !text-primary after:absolute after:bottom-0 ltr:after:left-0 rtl:after:right-0 ltr:after:right-0 rtl:after:left-0 after:h-px after:bg-size-[10px_1px] after:bg-repeat-x after:bg-linear-(--title-gradient) wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="0.8s">Past Experience & Credentials</h3>
 								<ul className="flex flex-col gap-2 text-secondary font-medium mb-8.75 wow fadeInUp" data-wow-delay="1.0s" data-wow-duration="0.8s">
-                                    {doctor.experience.map((exp, idx) => (
-									    <li key={idx} className="w-full relative lg:p-1.25 p-1 lg:ps-7.5 ps-6.25 xl:text-base text-2sm before:absolute ltr:before:left-0 rtl:before:right-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">{exp}</li>
-                                    ))}
-                                    <li className="w-full relative lg:p-1.25 p-1 lg:ps-7.5 ps-6.25 xl:text-base text-2sm before:absolute ltr:before:left-0 rtl:before:right-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Medical Council Registration No: {doctor.registrationNo}</li>
+									{ doctor.experience.map((exp, idx) => (
+										<li key={ idx } className="w-full relative lg:p-1.25 p-1 lg:ps-7.5 ps-6.25 xl:text-base text-2sm before:absolute ltr:before:left-0 rtl:before:right-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">{ exp }</li>
+									)) }
+									<li className="w-full relative lg:p-1.25 p-1 lg:ps-7.5 ps-6.25 xl:text-base text-2sm before:absolute ltr:before:left-0 rtl:before:right-0 before:font-black before:content-['\f109'] before:font-['flaticon'] before:text-primary before:top-2">Medical Council Registration No: { doctor.registrationNo }</li>
 								</ul>
 								<div className="row items-center wow fadeInUp [--tw-gutter-y:1.5rem]!" data-wow-delay="1.2s" data-wow-duration="0.8s">
 									<div className="sm:w-1/2 w-full flex">
 										<div className="text-center">
-											<span className="text-lg font-bold block text-primary">{doctor.name}</span>
-											<span className="text-sm block text-secondary">{doctor.qualifications}</span>
+											<span className="text-lg font-bold block text-primary">{ doctor.name }</span>
+											<span className="text-sm block text-secondary">{ doctor.qualifications }</span>
 										</div>
 									</div>
 									<div className="sm:w-1/2 w-full">
@@ -70,12 +143,12 @@ export default function AboutPage() {
 						<div className="xl:w-1/2 lg:w-2/3 w-full">
 							<div className="relative z-1 after:absolute after:top-0 ltr:after:left-0 rtl:after:right-0 after:size-full after:bg-no-repeat after:bg-bottom after:bg-content-media">
 								<div className="relative z-1 md:px-16 px-7.5">
-									<img src={imgDoctor || "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=475&h=745&fit=crop"} alt={doctor.name} className="w-full rounded-3xl" />
+									<img src={ imgDoctor || "https://images.pexels.com/photos/5327921/pexels-photo-5327921.jpeg?auto=compress&cs=tinysrgb&w=475&h=745&fit=crop" } alt={ doctor.name } className="w-full rounded-3xl" />
 								</div>
 								<div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-left-15 rtl:lg:-right-15 ltr:left-0 rtl:right-0 z-99 max-sm:hidden">
 									<div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">
 										<span className="xl:text-5xxl text-3xxl font-bold text-primary"><span className="value counted" data-value="10">10</span>+</span>
-										<span className="sm:text-lg text-base text-justify text-secondary font-semibold block font-title">Years of<br/>Experience</span>
+										<span className="sm:text-lg text-base text-justify text-secondary font-semibold block font-title">Years of<br />Experience</span>
 									</div>
 								</div>
 							</div>
@@ -103,12 +176,12 @@ export default function AboutPage() {
 								</div>
 								<p className="text-lg font-medium leading-[1.6] text-white">At Navjyoti Eye Hospital, we specialize in providing state-of-the-art ophthalmic care including advanced Cataract surgeries and Orbit & Oculoplasty treatments.</p>
 								<p className="text-lg font-light leading-[1.6] text-white">Our mission is to bring back the light into our patients' lives through meticulous care and precise surgical interventions. Because we believe, "Care your Eyes - You may not get them again".</p>
-							
+
 							</div>
 						</div>
 						<div className="lg:w-5/12 w-full mb-7.5 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.8s">
 							<div className="relative overflow-hidden xl:h-125 sm:h-50 h-62.5 sm:rounded-3xl rounded-xxl">
-								<img src={weCareImg || "https://images.pexels.com/photos/6749698/pexels-photo-6749698.jpeg?auto=compress&cs=tinysrgb&w=530&h=520&fit=crop"} alt="" className="size-full object-cover" />
+								<img src={ weCareImg || "https://images.pexels.com/photos/6749698/pexels-photo-6749698.jpeg?auto=compress&cs=tinysrgb&w=530&h=520&fit=crop" } alt="" className="size-full object-cover" />
 							</div>
 						</div>
 					</div>
@@ -129,7 +202,7 @@ export default function AboutPage() {
 				</div>
 			</section>
 
-			{/* <TeamSection /> */}
+			{/* <TeamSection /> */ }
 
 			<TestimonialSection />
 

@@ -19,6 +19,7 @@ const navLinks = [
     label: 'Treatments',
     href: '#',
     children: [
+      { label: 'Our Services', href: '/our-services' },
       { label: 'Cataract Surgery', href: '/treatments/cataract-surgery' },
       { label: 'Oculoplasty', href: '/treatments/oculoplasty' },
     ],
