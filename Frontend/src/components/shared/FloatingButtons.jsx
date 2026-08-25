@@ -4,7 +4,7 @@ export default function FloatingButtons() {
     // Basic phone number cleaning for URLs
     const phone = siteData.contact.primaryPhone.replace(/\D/g, '');
     // Ensure country code for WhatsApp (assuming India +91 if length is 10)
-    const whatsapp = "917024076325";
+    const whatsapp = "6387225002";
 
     return (
         <div className="fixed bottom-24 sm:bottom-10 right-5 z-[9999] flex flex-col gap-4 animate-fadeIn">

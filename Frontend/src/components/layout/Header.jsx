@@ -40,7 +40,7 @@ function NavItem({ item, depth = 0 }) {
         { hasChildren ? (
           <>
             <a
-              className={ `lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary after:ms-1 after:-mt-1 after:inline-block after:size-3 after:bg-starsvg max-lg:after:hidden cursor-pointer${parentActive ? ' text-primary' : ''}` }
+              className={ `lg:py-5 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary after:ms-1 after:-mt-1 after:inline-block after:size-3 after:bg-starsvg max-lg:after:hidden cursor-pointer${parentActive ? ' text-primary' : ''}` }
               href="#"
               onClick={ e => e.preventDefault() }
             >
@@ -57,7 +57,7 @@ function NavItem({ item, depth = 0 }) {
           <NavLink
             to={ item.href }
             className={ ({ isActive }) =>
-              `lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary${isActive ? ' text-primary' : ''}`
+              `lg:py-5 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary${isActive ? ' text-primary' : ''}`
             }
           >
             <span className="inline-block leading-7.5">{ item.label }</span>
@@ -133,7 +133,7 @@ export default function Header() {
         <div className="container-fluid flex 3xl:px-20! xl:px-12.5! md:px-7.5! px-3.75!">
 
           {/* ── Logo ── */ }
-          <div className="flex items-center align-middle xl:w-60 w-54 sm:h-34 h-20 xl:me-7.5 me-2 logo-dark">
+          <div className="flex items-center align-middle xl:w-60 w-54 sm:h-20 h-16 xl:me-7.5 me-2 logo-dark">
             <Link to="/" className="table-cell align-middle">
               <img src="/assets/images/navjyoti-logo.png" alt="ClinicMaster logo" className="object-contain h-full w-full max-sm:max-h-26 logo-dark-blue" />
             </Link>
@@ -168,7 +168,7 @@ export default function Header() {
                 <NavItem key={ item.href + item.label } item={ item } depth={ 0 } />
               )) }
               <li className="lg:hidden block max-lg:border-b max-lg:border-gray-200 relative group">
-                <NavLink to="/appointment" className="lg:py-7 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary text-primary">
+                <NavLink to="/appointment" className="lg:py-5 py-2 xl:px-4 lg:px-2 relative lg:inline-block block xl:text-lg text-2sm font-medium hover:text-primary text-primary">
                   <span className="inline-block leading-7.5">Book Appointment</span>
                 </NavLink>
               </li>

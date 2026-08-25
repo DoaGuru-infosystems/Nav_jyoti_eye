@@ -89,8 +89,8 @@ export default function AboutPage() {
 								</div>
 								<div className="sm:w-1/3 w-1/2 max-[375px]:w-full wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.8s">
 									<div className="mb-7.5 text-center">
-										<span className="lg:text-6xl sm:text-3xxl text-3xl font-bold leading-[1.2] text-primary font-title"><span className="value" data-value="14">3000</span>+</span>
-										<h3 className="lg:text-base sm:text-2sm text-sm font-normal font-base mb-0 ">Surgurys</h3>
+										<span className="lg:text-6xl sm:text-3xxl text-3xl font-bold leading-[1.2] text-primary font-title"><span className="value" data-value="14">35000</span>+</span>
+										<h3 className="lg:text-base sm:text-2sm text-sm font-normal font-base mb-0 ">Surgeries </h3>
 									</div>
 								</div>
 								<div className="sm:w-1/3 w-1/2 max-[375px]:w-full wow fadeInRight" data-wow-delay="1.0s" data-wow-duration="0.8s">
@@ -147,7 +147,7 @@ export default function AboutPage() {
 								</div>
 								<div className="absolute sm:bottom-37.5 bottom-15 ltr:lg:-left-15 rtl:lg:-right-15 ltr:left-0 rtl:right-0 z-99 max-sm:hidden">
 									<div className="inline-flex items-center gap-3.75 bg-white/90 sm:rounded-xxl rounded-lg py-3 px-5 backdrop-blur-xs shadow-info-widget-10 animate-move3">
-										<span className="xl:text-5xxl text-3xxl font-bold text-primary"><span className="value counted" data-value="10">10</span>+</span>
+										<span className="xl:text-5xxl text-3xxl font-bold text-primary"><span className="value counted" data-value="10">15</span>+</span>
 										<span className="sm:text-lg text-base text-justify text-secondary font-semibold block font-title">Years of<br />Experience</span>
 									</div>
 								</div>

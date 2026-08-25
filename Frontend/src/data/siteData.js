@@ -115,7 +115,7 @@ export const siteData = {
       id: "glaucoma-treatment",
       title: "Glaucoma Treatment & Management",
       shortDesc:
-        "Glaucoma is a silent thief of sight — often causing irreversible damage before symptoms appear. At Nav Jyoti Eye Hospital, we offer early detection and comprehensive management of all types of glaucoma using advanced tonometry, OCT imaging, and visual field analysis. Our personalised treatment plans — including medicated eye drops, laser therapy (SLT/LTP), and surgical interventions — aim to halt disease progression and preserve your precious vision for life.",
+        "Glaucoma is a silent thief of sight often causing irreversible damage before symptoms appear. At Nav Jyoti Eye Hospital, we offer early detection and comprehensive management of all types of glaucoma using advanced tonometry, OCT imaging, and visual field analysis. Our personalised treatment plans — including medicated eye drops, laser therapy (SLT/LTP), and surgical interventions — aim to halt disease progression and preserve your precious vision for life.",
       path: "/treatments/glaucoma-treatment",
       icon: "flaticon-eye-1",
       tags: ["IOP Control", "Laser SLT", "OCT Imaging", "Visual Field"],
@@ -130,9 +130,9 @@ export const siteData = {
     },
     {
       id: "retina-surgery",
-      title: "Retina Surgery & Vitreoretinal Care",
+      title: "Medical retina services & Vitreoretinal Care",
       shortDesc:
-        "The retina is the light-sensitive layer at the back of your eye — your window to the world. Our specialised vitreoretinal services cover the complete spectrum of retinal conditions including Retinal Detachment Repair, Macular Hole Surgery, Diabetic Retinopathy management, and Anti-VEGF injections for wet AMD. Using cutting-edge vitrectomy technology and laser photocoagulation, our surgeons work with exceptional precision to restore and protect your central vision.",
+        "The retina is the light-sensitive layer at the back of your eye  your window to the world. Our specialised vitreoretinal services cover the complete spectrum of retinal conditions including Retinal Detachment Repair, Macular Hole Surgery, Diabetic Retinopathy management, and Anti-VEGF injections for wet AMD. Using cutting-edge vitrectomy technology and laser photocoagulation, our surgeons work with exceptional precision to restore and protect your central vision.",
       path: "/treatments/retina-surgery",
       icon: "flaticon-eye",
       tags: [
@@ -207,7 +207,8 @@ export const siteData = {
       specializationHindi:
         "चित्रकूट के पूर्व वरिष्ठ नेत्र सर्जन",
       experience: [
-        "Ex-consultant, Shankracharya Netralay, Jhoteshwar",
+        "Visiting consultant , Shankracharya Netralay, Jhoteshwar",
+        "Visiting consultant Anushri Nitrala, Jabalpur ",
         "Ex-consultant, SNC Chitrakoot",
         "Ex-consultant, SKEH Basti (U.P.)",
       ],
