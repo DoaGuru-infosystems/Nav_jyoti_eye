@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import WhyChooseImg from "../../assets/images/home/Why-Choose-us.png";
+import WhyChooseImg from "../../assets/images/home/Why-Choose-us2.png";
 
 export default function WhyChooseUsSection() {
 

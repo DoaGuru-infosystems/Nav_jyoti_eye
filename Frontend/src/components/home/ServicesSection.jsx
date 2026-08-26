@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { siteData } from '../../data/siteData';
-import serviceImg from '../../assets/images/home/ServicesSection-1.png';
+import serviceImg from '../../assets/images/home/doctor.png';
 
 export default function ServicesSection() {
 	// Show only first 4 services on home page
@@ -14,8 +14,8 @@ export default function ServicesSection() {
 					<h2 className="2xxl:text-5xxl lg:text-[38px] sm:text-[32px] text-2xxl font-bold capitalize leading-[1.3] wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.7s">Services We Provide</h2>
 				</div>
 				<div className="row items-center justify-between">
-					<div className="xl:w-1/3 lg:w-2/5 w-full max-sm:hidden max-xl:mb-10 text-center wow fadeInLeft overflow-hidden" data-wow-delay="0.4s">
-						<img src={serviceImg} alt="Doctor" className="max-w-full h-auto drop-shadow-2xl mx-auto object-contain mix-blend-multiply scale-110" />
+					<div className="xl:w-1/3 lg:w-2/5 w-full max-sm:hidden max-xl:mb-10 text-center wow fadeInLeft" data-wow-delay="0.4s">
+						<img src={serviceImg} alt="Doctor" className="w-auto h-[400px] lg:h-[500px] xl:h-[600px] drop-shadow-2xl mx-auto object-contain mix-blend-multiply scale-110" />
 					</div>
 					<div className="xl:w-2/3 lg:w-3/5 w-full xl:pl-10">
 						<div className="row relative z-1 wow fadeInUp " data-wow-delay="0.8s">
