@@ -1,6 +1,6 @@
 // siteData.js - Centralized Data Source
 
-import hospitaImage from "../assets/images/navjyoti/hospita.png";
+import hospitaImage from "../assets/images/Gallery-image/IMG-20260827-WA0020.webp";
 export const siteData = {
   // Global Settings
   branding: {
